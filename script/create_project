@@ -14,7 +14,7 @@ project_directory = base_directory + project_name
 fail("Project directory (#{project_directory}) already exists") if project_directory.exist?
 
 template_url = "git://github.com/thoughtbot/suspenders.git"
-changeme = "CHANGEME"
+changeme = "tell_my_politician"
 changesession = "CHANGESESSION"
 
 def run(cmd)

@@ -2,7 +2,7 @@
 set :rails_env, 'production'
 
 # Who are we?
-set :application, 'CHANGEME'
+set :application, 'tell_my_politician'
 set :repository, "git@github.com:thoughtbot/#{application}.git"
 set :scm, "git"
 set :deploy_via, :remote_cache

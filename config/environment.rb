@@ -2,7 +2,7 @@
 
 # Change this to the name of your rails project, like carbonrally.  
 # Just use the same name as the svn repo.
-PROJECT_NAME = "CHANGEME"
+PROJECT_NAME = "tell_my_politician"
 
 throw "The project's name in environment.rb is blank" if PROJECT_NAME.empty?
 throw "Project name (#{PROJECT_NAME}) must_be_like_this" unless PROJECT_NAME =~ /^[a-z_]*$/
@@ -66,7 +66,7 @@ Rails::Initializer.run do |config|
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
-  SESSION_KEY = "CHANGESESSION" 
+  SESSION_KEY = "0559600493dfabd3999d3af734aec674" 
   config.action_controller.session = {
     :session_key => "_#{PROJECT_NAME}_session",
     :secret      => SESSION_KEY
