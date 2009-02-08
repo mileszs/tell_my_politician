@@ -12,8 +12,17 @@ cert_chain: []
 
 date: 2008-10-26 00:00:00 -04:00
 default_executable: 
-dependencies: []
-
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: activesupport
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: 1.4.4
+    version: 
 description: The will_paginate library provides a simple, yet powerful and extensible API for ActiveRecord pagination and rendering of pagination links in ActionView templates.
 email: mislav.marohnic@gmail.com
 executables: []

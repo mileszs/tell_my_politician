@@ -32,6 +32,10 @@ Rails::Initializer.run do |config|
              :lib => 'will_paginate', 
              :source => 'http://gems.github.com', 
              :version => '~> 2.3.6'
+  config.gem 'ym4r'
+  config.gem 'json'
+  config.gem 'sunlight'
+
   
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
