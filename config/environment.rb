@@ -35,6 +35,7 @@ Rails::Initializer.run do |config|
   config.gem 'ym4r'
   config.gem 'json'
   config.gem 'sunlight'
+  config.gem 'mbleigh-acts-as-taggable-on', :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
 
   
   # Only load the plugins named here, in the order given. By default, all plugins 
