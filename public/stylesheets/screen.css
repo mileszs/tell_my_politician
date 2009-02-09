@@ -8,4 +8,47 @@ input[type="submit"]
 input[type="text"]
 {
 	border:solid 1px #FF0000;
+	width:350px;
+}
+div#header
+{
+	text-align:center;
+	
+}
+div#header h1
+{
+	margin:0px;
+}
+div#header span
+{
+	font-size:small;
+	position:relative;
+	top:-10px;
+	left:62px;
+}
+div#content
+{
+	
+}
+div#search{
+	background-color:#CCCCCC;
+	margin:0px auto;
+	border: solid 1px #FFFFFF;
+	padding:30px;
+	width:427px;
+}
+div#footer{
+
+}
+div#footer ul{
+	width:465px;
+	margin:10px auto;
+	padding:0px;
+}
+div#footer ul li
+{
+	float:left;
+	margin:3px;
+	font-size:x-small;
+	list-style-type:none;
 }
