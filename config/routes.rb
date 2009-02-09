@@ -25,5 +25,7 @@ ActionController::Routing::Routes.draw do |map|
   #   m.login  '/login',  :action => 'new'
   #   m.logout '/logout', :action => 'destroy'
   # end
+  map.resources :links, :member => { :add => :get } 
+  map.root :controller => "links", :action => "add"
 
 end
