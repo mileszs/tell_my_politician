@@ -18,11 +18,11 @@
 	</div>
 	<div id="footer">
 		<ul>
-			<li><%= link_to "Add Tell My Politician To Your Site" , url_for(:controller=>'site',:action=>"instructions")%></li>
-			<li><%= link_to "About inTouch Politics", url_for(:controller=>"site",:action=>"inTouch")%></li>
+			<li><%= link_to "Add Tell My Politician To Your Site" , instructions_url%></li>
+			<li><%= link_to "About inTouch Politics", intouch_url%></li>
 			<li><%= link_to "Blog","http://blog.tellmypolitician.com"%></li>
-			<li><%= link_to "Contact Us", url_for(:controller=>"site",:action=>"contact")%></li>
-			<li><%= link_to "Privacy Policy",url_for(:controller=>"site",:action=>"privacy")%></li>
+			<li><%= link_to "Contact Us", contact_url %></li>
+			<li><%= link_to "Privacy Policy",privacy_url %></li>
 		</ul>
 		
 		
