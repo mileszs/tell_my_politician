@@ -1,0 +1,11 @@
+input[type="submit"]
+{
+	border:solid 1px #FF0000;
+	font-weight:bold;
+	color:#FF0000;
+	background-color:#0000FF;
+}
+input[type="text"]
+{
+	border:solid 1px #FF0000;
+}

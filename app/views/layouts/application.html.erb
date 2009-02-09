@@ -8,7 +8,24 @@
     <%= javascript_include_tag :defaults, :cache => true %>
   </head>
   <body class="<%= body_class %>">
-    <%= render :partial => 'layouts/flashes' -%>
-    <%= yield %>
+    <div id="header">
+		<h1>Tell My Politician</h1>
+		<span> Contact Your Representative</span>
+	</div>
+	<div id="content">
+		<%= render :partial => 'layouts/flashes' -%>
+		<%= yield %>		
+	</div>
+	<div id="footer">
+		<ul>
+			<li><%= link_to "Add Tell My Politician To Your Site" , url_for(:controller=>'site',:action=>"instructions")%></li>
+			<li><%= link_to "About inTouch Politics", url_for(:controller=>"site",:action=>"inTouch")%></li>
+			<li><%= link_to "Blog","http://blog.tellmypolitician.com"%></li>
+			<li><%= link_to "Contact Us", url_for(:controller=>"site",:action=>"contact")%></li>
+			<li><%= link_to "Privacy Policy",url_for(:controller=>"site",:action=>"privacy")%></li>
+		</ul>
+		
+		
+	</div>	
   </body>
 </html>
