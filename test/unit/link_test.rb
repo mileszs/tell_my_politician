@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class LinkTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  should_validate_presence_of :url
+  should_have_many :user_links
 end
