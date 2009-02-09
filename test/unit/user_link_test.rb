@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class UserLinkTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  should_validate_presence_of :ip
+  should_belong_to :link
 end
