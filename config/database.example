@@ -1,21 +1,22 @@
+# Example database.yml
 <% PASSWORD_FILE = File.join(RAILS_ROOT, '..', '..', 'shared', 'config', 'dbpassword') %>
 
 development:
   adapter: mysql
   database: <%= PROJECT_NAME %>_development
   username: root
-  password: 
+  password:
   host: localhost
   encoding: utf8
-  
+
 test:
   adapter: mysql
   database: <%= PROJECT_NAME %>_test
   username: root
-  password: 
+  password:
   host: localhost
   encoding: utf8
-  
+
 staging:
   adapter: mysql
   database: <%= PROJECT_NAME %>_staging
@@ -24,7 +25,7 @@ staging:
   host: localhost
   encoding: utf8
   socket: /var/lib/mysql/mysql.sock
-  
+
 production:
   adapter: mysql
   database: <%= PROJECT_NAME %>_production
