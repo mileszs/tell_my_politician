@@ -29,8 +29,9 @@ ActionController::Routing::Routes.draw do |map|
   map.instructions 'instructions',:controller=>'sites',:action=>:instructions
   map.contact 'contact',:controller=>'sites',:action=>:contact
   map.intouch 'about',:controller=>'sites',:action=>:intouch
-  
-  map.resources :links, :member => { :add => :get } 
+
+  map.links_add 'add', :controller => 'links', :action => 'add'
+  map.links_resulst 'results', :controller => 'links', :action => 'results'
   map.root :controller => "links", :action => "add"
 
 end

@@ -18,4 +18,13 @@ class LinksControllerTest < ActionController::TestCase
     should_respond_with :success
   end
 
+  context "on GET to :results" do
+    #TODO: Should mock the call to the Sunlight API
+    setup { get :results, :address => '1980 Picadilly Pl. Apt#A Indianapolis, IN 46260' }
+    should_assign_to :results
+    should_render_template :results
+    should_not_set_the_flash
+    should_respond_with :success
+  end
+
 end

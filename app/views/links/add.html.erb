@@ -1,7 +1,9 @@
 	<%= link_to h(@link.title), @link.url %>
 	
 	<div id="search">
-		<p>Find Your Representatives</p>
-		<input type="text" id="SearchField"/>
-		<input type="submit" value="Search" id="SearchBtn" />
+    <% form_tag('/links/results', :method => :get) do %>
+      <p>Find Your Representatives</p>
+      <%= text_field_tag :address %>
+      <%= submit_tag 'Find Your Rep' %>
+    <% end %>
 	</div>
