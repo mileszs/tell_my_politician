@@ -1,12 +1,12 @@
-<li class="<%= politician.party %>">
+<li class="<%= result.party %>">
 <span>
-	<%= politician.firstname + politician.middlename + politician.lastname %><br/>
-	<%= politician.state %>	 
+	<%= result.firstname + ' ' + result.middlename + ' ' + result.lastname %><br/>
+	<%= result.state %>	 
 </span>
 <span>
-	Phone: <%= politician.phone %>
-	Fax: <%= politician.fax
-	Address: <%= politician.congress_office %>
-	Website: <%= politician.website %>
+	Phone: <%= result.phone %>
+	Fax: <%= result.fax %>
+	Address: <%= result.congress_office %>
+	Website: <%= result.website %>
 </span>
 </li>

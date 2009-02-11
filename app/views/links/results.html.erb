@@ -1,1 +1,6 @@
-Senior Senator: <%= "#{@results[:senior_senator].firstname} #{@results[:senior_senator].lastname}"   %>
+<ul>
+<% @results.each do |key, value| %>
+   <%= render :partial => 'result', :object => value%> 
+<%end %>
+</ul>
+
