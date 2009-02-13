@@ -30,8 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   map.contact 'contact',:controller=>'sites',:action=>:contact
   map.intouch 'about',:controller=>'sites',:action=>:intouch
 
-  map.links_add 'links/add', :controller => 'links', :action => 'add'
-  map.links_results 'links/results', :controller => 'links', :action => 'results'
-  map.root :controller => "links", :action => "add"
+  map.resources :legislators, :only => [:index], :collection => { :search => :get }
+  map.root :controller => "legislators", :action => "search"
 
 end
