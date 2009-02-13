@@ -17,3 +17,5 @@ config.action_view.debug_rjs                         = true
 config.action_mailer.raise_delivery_errors = false
 
 HOST = 'localhost'
+
+config.gem "josevalim-rails-footnotes", :lib => "rails-footnotes", :source => "http://gems.github.com"
