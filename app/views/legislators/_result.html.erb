@@ -1,12 +1,16 @@
 <li class="<%= result.party %>">
-<span>
-	<%= result.firstname + ' ' + result.middlename + ' ' + result.lastname %><br/>
-	<%= result.state %>
-</span>
-<span>
-	Phone: <%= result.phone %>
-	Fax: <%= result.fax %>
-	Address: <%= result.congress_office %>
-	Website: <%= result.website %>
-</span>
+	<img class="politician_picture" src="./images/pictures/<%= result.bioguide_id %>.jpg"/>
+	<div class="politician_name">		
+		<%= result.firstname + ' ' + result.middlename + ' ' + result.lastname %><br/>
+		<%= result.state %>
+	</div>
+	<div class="politician_address">
+		<b>Phone:</b> <%= result.phone %><br/>
+		<b>Fax:</b> <%= result.fax %><br/>
+		<b>Address:</b> <%= result.congress_office %><br/>
+		<b>Website:</b> <%= link_to result.website, result.website %><br/>
+		<b>Contact Forum:</b> <%= link_to result.webform, result.webform %><br/>
+		<b>Email:</b> <%= link_to result.email, result.email %>
+	</div>
+	<br style="clear:both" />
 </li>

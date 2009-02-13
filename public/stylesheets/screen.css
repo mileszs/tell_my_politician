@@ -28,7 +28,8 @@ div#header span
 }
 div#content
 {
-	
+	width:900px;
+	margin:0px auto;	
 }
 div#search{
 	background-color:#CCCCCC;
@@ -51,4 +52,39 @@ div#footer ul li
 	margin:3px;
 	font-size:x-small;
 	list-style-type:none;
+}
+div.politician_name
+{
+	float:left;
+
+}
+div.politician_address
+{
+	float:left;
+}
+ul
+{
+}
+li.D, li.R 
+{
+	list-style:none;
+	clear:both;
+	padding:10px;
+	border:solid 3px;
+	margin:5px;
+	background-color:#AFAFAF;
+}
+li.D
+{
+	border-color:#FF0000;
+}
+li.R 
+{
+	border-color:#0000FF;
+}
+img.politician_picture
+{
+	float:left;
+	background-color:#FFFFFF;
+	
 }
