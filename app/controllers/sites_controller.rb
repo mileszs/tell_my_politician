@@ -14,4 +14,7 @@ class SitesController < ApplicationController
   def intouch
     
   end
+
+  def bookmarklet
+  end
 end

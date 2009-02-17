@@ -7,5 +7,6 @@ public/system
 coverage/*
 *.swp
 config/database.yml
+*.*~
 
 !.keep

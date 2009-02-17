@@ -1,9 +1,11 @@
-	<%= link_to h(@link.title), @link.url %>
+<%= link_to h(@link.title), @link.url %>
+<div id="search">
+	<% form_tag('/legislators', :method => :get) do %>
+		<p>Find Your Representatives</p>
+		<%= text_field_tag :address %>
+		<%= submit_tag 'Find Your Rep' %>
+	<% end %>
+</div>
 
-	<div id="search">
-    <% form_tag('/legislators', :method => :get) do %>
-      <p>Find Your Representatives</p>
-      <%= text_field_tag :address %>
-      <%= submit_tag 'Find Your Rep' %>
-    <% end %>
-	</div>
+<div id="result">
+</div>
