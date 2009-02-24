@@ -8,9 +8,9 @@
 		<b>Phone:</b> <%= result.phone %><br/>
 		<b>Fax:</b> <%= result.fax %><br/>
 		<b>Address:</b> <%= result.congress_office %><br/>
-		<b>Website:</b> <%= link_to result.website, result.website %><br/>
-		<b>Contact Forum:</b> <%= link_to result.webform, result.webform %><br/>
-		<b>Email:</b> <%= link_to result.email, result.email %>
+		<b>Website:</b> <%= link_to result.website, result.website, {:rel=>'nofollow'} %><br/>
+		<b>Contact Form:</b> <%= link_to result.webform, result.webform , {:rel=>'nofollow'} %><br/>
+		<b>Email:</b> <%= link_to_unless result.email.length > 0, result.email, result.email, {:rel=>'nofollow'} %>
 	</div>
 	<br style="clear:both" />
 </li>

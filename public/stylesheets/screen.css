@@ -4,11 +4,12 @@ input[type="submit"]
 	font-weight:bold;
 	color:#FF0000;
 	background-color:#0000FF;
+	margin:10px auto;
 }
 input[type="text"]
 {
 	border:solid 1px #FF0000;
-	width:350px;
+	width:100%;
 }
 div#header
 {
