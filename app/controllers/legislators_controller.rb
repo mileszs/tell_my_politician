@@ -1,7 +1,7 @@
 class LegislatorsController < ApplicationController
 
   def search
-    @link = Link.create(params[:link])
+    @link = Link.find_or_create_by_url(params[:link])
     @user = UserLink.create({ :ip => request.remote_ip, :link_id => @link.id })
   end
 
