@@ -25,7 +25,6 @@ namespace :deploy do
   task :default do
     set :migrate_target, :latest
     update_code
-    # copy_db_yml
     migrate
     symlink
     restart
@@ -34,7 +33,6 @@ namespace :deploy do
   desc "Restart Passenger"
   task :restart do
     send(run_method, "touch #{current_path}/tmp/restart.txt")
-   # send(run_method, "cd #{deploy_to}/#{current_dir} && #{mongrel_rails} cluster::restart --config #{mongrel_cluster_config}")
   end
 
   [:start, :stop].each do |t|
@@ -46,11 +44,6 @@ namespace :deploy do
   task :after_default do
     cleanup
   end
-
-  # desc "Copy database.yml from shared dir"
-  # task :copy_db_yml, :roles => :app do
-  #   send(run_method, "cp -f #{shared_path}/database.yml #{current_path}/config/")
-  # end
 
 end
 
