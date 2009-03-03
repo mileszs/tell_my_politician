@@ -25,4 +25,12 @@ module LinksHelper
 		end
 		
 	end
+
+  def district_or_seniority(str)
+    if str =~ /^\d$/
+      str = "District #{str}"
+    else
+      str
+    end
+  end
 end

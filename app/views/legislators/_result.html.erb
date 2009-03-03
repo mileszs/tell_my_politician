@@ -1,17 +1,17 @@
 <li class="<%= result.party %>">
 	<img class="politician_picture" src="./images/pictures/<%= result.bioguide_id %>.jpg"/>
-	<div class="politician_name">		
+	<div class="politician_name">
 		<%= result.firstname + ' ' + result.middlename + ' ' + result.lastname %><br/>
 		<%= result.state %><br/>
 		<%= WriteLongPartyName(result.party) %><br/>
-		<%= result.district %><br/>
+		<%= district_or_seniority(result.district) %><br/>
 	</div>
 	<div class="politician_address">
 		<b>Phone:</b> <%= result.phone %><br/>
 		<b>Fax:</b> <%= result.fax %><br/>
 		<b>Address:</b> <%= result.congress_office %><br/>
 		<b>Website:</b> <%= link_to result.website, result.website, {:rel=>'nofollow'} %><br/>
-		<%= link_to 'Email ' + WriteLongTitle(result.title) + ' ' + result.lastname,WriteEmailLink( result.email, result.webform ) , {:rel=>'nofollow'} %><br/>		
+		<%= link_to 'Email ' + WriteLongTitle(result.title) + ' ' + result.lastname,WriteEmailLink( result.email, result.webform ) , {:rel=>'nofollow'} %><br/>
 	</div>
 	<br style="clear:both" />
 </li>
