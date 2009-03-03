@@ -1,0 +1,8 @@
+<div id="search">
+	<% form_tag('/legislators', :method => :get) do %>
+		<h2>Find Your Representatives</h2>
+    <p class="notice">* Providing your full address will ensure accurate results.</p>
+		<%= text_field_tag :address, nil,:watermark=>"Enter your full address here"  %>
+		<%= submit_tag 'Find Your Rep' %>
+	<% end %>
+</div>
