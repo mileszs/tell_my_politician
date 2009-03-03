@@ -1,6 +1,6 @@
 <ul>
-<% @results.each do |key, value| %>
-   <%= render :partial => 'result', :object => value%> 
-<%end %>
+  <%= render :partial => 'result', :object => @results[:senior_senator] -%>
+  <%= render :partial => 'result', :object => @results[:junior_senator] -%>
+  <%= render :partial => 'result', :object => @results[:representative] -%>
 </ul>
 <br style="clear:both"/>
