@@ -12,7 +12,7 @@ module LinksHelper
 	def WriteLongTitle( title )
 		case title
 		when 'Rep'
-			'Represenitive'
+			'Representative'
 		when 'Sen'
 			'Senator'
 		end
