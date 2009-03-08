@@ -1,0 +1,17 @@
+<script type="text/javascript" language="javascript">
+  function removeToolbar()
+  {
+     var ELiframe = window.frames['mainframe'];
+     if( ELiframe != null )
+     {
+        document.location = ELiframe.location;
+     } else {
+        $('toolbar').hide('fast');
+     }
+  }
+</script>
+<div class="toolbar">
+	<a href="javascript:removeToolbar();" ref="nofollow">Remove Toolbar</a>
+	<a href="javascript:document.location='http://tellmypolitician.com/search'" ref="nofollow">Goto Legislators List</a>
+	
+</div>

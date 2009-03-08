@@ -1,0 +1,2 @@
+class ToolbarController < ApplicationController
+end

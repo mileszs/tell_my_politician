@@ -13,7 +13,7 @@
 		<span> Contact Your Representative</span>
 	</div>
 	<div id="content">
-		<%= render :partial => 'layouts/flashes' -%>
+		<%= render :partial => 'layouts/flashes' %>
 		<%= yield %>		
 	</div>
 	<div id="footer">
@@ -24,8 +24,6 @@
 			<li><%= link_to "Contact Us", contact_url %></li>
 			<li><%= link_to "Privacy Policy",privacy_url %></li>
 		</ul>
-		
-		
 	</div>	
 
 	<div id="getclicky">
@@ -40,7 +38,7 @@
 		try {
 		var pageTracker = _gat._getTracker("UA-7619758-1");
 		pageTracker._trackPageview();
-		 catch(err) {}
+		} catch(err) {}
 	</script>
   </body>
 </html>
