@@ -2,16 +2,17 @@
   function removeToolbar()
   {
      var ELiframe = window.frames['mainframe'];
-     if( ELiframe != null )
+     if( ELirame != null )
      {
-        document.location = ELiframe.location;
-     } else {
-        $('toolbar').hide('fast');
+	    var url = ELiframe.location.href;
+        document.location.assign(url);
+     } else {       
+	    $('toolbar').hide('fast');
      }
   }
 </script>
 <div class="toolbar">
-	<a href="javascript:removeToolbar();" ref="nofollow">Remove Toolbar</a>
-	<a href="javascript:document.location='http://tellmypolitician.com/search'" ref="nofollow">Goto Legislators List</a>
-	
+   <a href="javascript:removeToolbar();" ref="nofollow">Remove Toolbar</a>
+   <a href="<%= search_url %>" ref="nofollow">Goto Legislators List</a>
+   <a href="<%= original_url %>" ref="nofollow">Return</a>
 </div>
