@@ -67,9 +67,9 @@ div#footer{
 
 }
 div#footer ul{
-	width:465px;
-	margin:10px auto;
-	padding:0px;
+	width: 375px;
+	margin: 10px auto;
+	padding: 0px;
 }
 div#footer ul li
 {
@@ -119,4 +119,18 @@ div.politician_address
 .notice {
   color: #007200;
   background-color: #EEE8AA;
+}
+
+div#tools {
+  width: 444px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+div#tools div.tool_type {
+  float: left;
+  border: 1px solid #999;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
 }
