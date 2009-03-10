@@ -1,2 +1,2 @@
-<%= link_to h(@link.title), @link.url %>
+<%= link_to h(@link.title), @link.url unless @link.blank? %>
 <%= render :partial => 'search_form' %>
