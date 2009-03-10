@@ -1,43 +1,19 @@
 ActionController::Routing::Routes.draw do |map|
 
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
+  map.connect ':action', :controller => 'sites'
 
-  # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
-
-  # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-
-  # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
-
-  # See how all your routes lay out with "rake routes"
-
-  # map.home '', :controller => 'home', :action => 'dashboard'
-  # map.with_options :controller => 'sessions'  do |m|
-  #   m.login  '/login',  :action => 'new'
-  #   m.logout '/logout', :action => 'destroy'
-  # end
-  
-
-  map.home 'home', :controller => 'sites', :action => :home
+  # The above route actually takes care of the 5 below
   map.privacy 'privacy', :controller => 'sites', :action => :privacy
   map.instructions 'instructions', :controller => 'sites', :action => :instructions
   map.contact 'contact', :controller => 'sites', :action=> :contact
   map.intouch 'about', :controller=> 'sites', :action=> :intouch
-  map.bookmarklet 'bookmarklet', :controller=>'sites', :action=>:bookmarklet
+  map.bookmarklet 'bookmarklet', :controller => 'sites', :action => :bookmarklet
 
-  map.toolbar 'toolbar',:controller=>'toolbar'
+  map.toolbar 'toolbar', :controller => 'toolbar'
 
   map.resources :legislators, :only => [:index], :collection => { :search => :get }
   map.search 'search', :controller => 'legislators', :action => :search
+
   map.root :controller => 'sites', :action => :home
 
 end
