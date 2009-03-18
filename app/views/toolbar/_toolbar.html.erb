@@ -1,17 +1,23 @@
 <script type="text/javascript" language="javascript">
   function removeToolbar()
   {
-     var ELiframe = window.frames['mainframe'];
-     if( ELirame != null )
+     var ELiframe = document.getElementById('TMP__mainframe');
+     if( ELiframe != null )
      {
-	    var url = ELiframe.location.href;
+	var url = ELiframe.src;
         document.location.assign(url);
      } else {       
-	    $('toolbar').hide('fast');
+	$('TMP__toolbar').hide('fast');
      }
   }
 </script>
-<div class="toolbar">
+<style type="text/css">
+   div.TMP__toolbar
+   {
+     background-color:#cccccc;
+   }
+</style>
+<div class="TMP__toolbar">
    <a href="javascript:removeToolbar();" ref="nofollow">Remove Toolbar</a>
    <a href="<%= search_url %>" ref="nofollow">Goto Legislators List</a>
    <a href="<%= original_url %>" ref="nofollow">Return</a>
