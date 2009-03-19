@@ -1,9 +1,19 @@
 body {
-  color: #333;
+  color: #09102d;
+  background-color:#001937;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 100%;
+}
+h1 {
+  color:#010e42;
+  text-transform:uppercase;
+}
+span.politician_name
+{
+   color:#8d1231;
+   font-weight:bold;
 }
 input[type="submit"]
 {
@@ -25,8 +35,27 @@ input[type="submit"]:hover
 }
 input[type="text"]
 {
-	border:solid 1px #FF0000;
-	width:100%;
+	border-style:solid none;
+        border-color:#8d1231;
+        border-top-width:4px;
+        border-bottom-width:9px;
+	width:300px;
+        margin:0px;
+        
+	padding:5px 0px 0px 0px;       
+        height:21px;
+}
+img.search-surround
+{
+	margin:0px;
+	padding:0px;
+	position:relative;
+        top:17px;
+}
+input[type="image"].search-button
+{
+	position:relative;
+	top:15px;
 }
 div#header
 {
@@ -54,14 +83,15 @@ div#header span
 div#content
 {
 	width:900px;
-	margin:0px auto;	
+	margin:0px auto;
+        background-color:#b8ab9a;	
 }
 div#search{
-	background-color:#CCCCCC;
+	background-color:#ebe7de;
 	margin:0px auto;
-	border: solid 1px #FFFFFF;
+	/*border: solid 1px #FFFFFF;*/
 	padding:30px;
-	width:427px;
+	width:840px;
 }
 div#footer{
 
@@ -86,17 +116,17 @@ li.D, li.R
 	list-style:none;
 	clear:both;
 	padding:10px;
-	border:solid 3px;
+	/*border:solid 3px;*/
 	margin:5px;
-	background-color:#AFAFAF;
+	background-color:#ebe7de;
 }
 li.D
 {
-	border-color:#0000FF;
+	/*border-color:#0000FF;*/
 }
 li.R 
 {
-	border-color:#FF0000;
+	/*border-color:#FF0000;*/
 }
 img.politician_picture
 {

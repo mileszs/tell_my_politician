@@ -2,7 +2,7 @@
 <li class="<%= result.party %>">
 	<img class="politician_picture" src="./images/pictures/<%= result.bioguide_id %>.jpg"/>
 	<div class="politician_name">
-    <strong><%= result.firstname + ' ' + result.middlename + ' ' + result.lastname %></strong><br/>
+    <span class="politician_name"><%= result.firstname + ' ' + result.middlename + ' ' + result.lastname %></span><br/>
 		<%= result.state %><br/>
 		<%= WriteLongPartyName(result.party) %><br/>
 		<%= district_or_seniority(result.district) %><br/>
