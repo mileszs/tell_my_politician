@@ -8,10 +8,10 @@
 		<%= district_or_seniority(result.district) %><br/>
 	</div>
 	<div class="politician_address">
-		<b>Phone:</b> <%= result.phone %><br/>
-		<b>Fax:</b> <%= result.fax %><br/>
-		<b>Address:</b> <%= result.congress_office %><br/>
-		<b>Website:</b> <%= link_to result.website, result.website, {:rel=>'nofollow'} %><br/>
+		<b>phone</b> <%= result.phone %> |
+		<b>fax</b> <%= result.fax %><br/>
+		<%= result.congress_office %><br/>
+		<%= link_to result.website, result.website, {:rel=>'nofollow'} %><br/>
 		<%= link_to 'Email ' + WriteLongTitle(result.title) + ' ' + result.lastname,WriteEmailLink( result.email, result.webform ) , {:rel=>'nofollow'} %><br/>
 	</div>
 	<br style="clear:both" />

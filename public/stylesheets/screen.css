@@ -1,14 +1,28 @@
 body {
-  color: #09102d;
+  color: #060d43;
   background-color:#001937;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  font-size: 100%;
+  font-size: 14px;
 }
 h1 {
   color:#010e42;
   text-transform:uppercase;
+  font-size:18px;
+  width:527px;
+  margin: 0px auto;
+}
+h2{
+	color:#8D1231;
+	font-size:22px;
+	position:relative;
+	top:44px;
+	left:10px
+}
+form{
+	margin: 0px auto;
+	width: 388px;
 }
 span.politician_name
 {
@@ -55,7 +69,7 @@ img.search-surround
 input[type="image"].search-button
 {
 	position:relative;
-	top:15px;
+	top:26px;
 }
 div#header
 {
@@ -84,7 +98,9 @@ div#content
 {
 	width:900px;
 	margin:0px auto;
-        background-color:#b8ab9a;	
+        background-color:#b8ab9a;
+	-moz-border-radius: 10px;	
+	-webkit-border-radius: 10px;	
 }
 div#search{
 	background-color:#ebe7de;
@@ -92,14 +108,22 @@ div#search{
 	/*border: solid 1px #FFFFFF;*/
 	padding:30px;
 	width:840px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-radius-topleft: 10px;
+	-webkit-border-radius-topright: 10px;
 }
-div#footer{
-
+div#footer a{
+	color:#f2e5d5;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-size:9px;
 }
 div#footer ul{
-	width: 375px;
+	width:335px;
 	margin: 10px auto;
 	padding: 0px;
+	
 }
 div#footer ul li
 {
@@ -110,6 +134,9 @@ div#footer ul li
 }
 ul
 {
+	margin:0px auto;
+	width:537px;
+	padding:0px;
 }
 li.D, li.R 
 {
@@ -119,6 +146,9 @@ li.D, li.R
 	/*border:solid 3px;*/
 	margin:5px;
 	background-color:#ebe7de;
+	width:537px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 li.D
 {
@@ -132,18 +162,20 @@ img.politician_picture
 {
 	float:left;
 	background-color:#FFFFFF;
-  margin: 1em;	
+  	/*margin: 1em;	*/
 }
 div.politician_name
 {
 	float:left;
-  margin: 1em;
-  width: 200px;
+  	margin: 0px 20px 0px 5px;
+  	width: 137px;
+	text-align:right;
 }
 div.politician_address
 {
 	float:left;
-  margin: 1em;
+ 	
+	width:265px
 }
 
 .notice {
