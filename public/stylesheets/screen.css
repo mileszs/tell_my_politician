@@ -13,17 +13,8 @@ h1 {
   width:527px;
   margin: 0px auto;
 }
-h2{
-	color:#8D1231;
-	font-size:22px;
-	position:relative;
-	top:44px;
-	left:10px
-}
-form{
-	margin: 0px auto;
-	width: 388px;
-}
+
+
 span.politician_name
 {
    color:#8d1231;
@@ -47,30 +38,8 @@ input[type="submit"]:hover
   padding: 0.5em;
 	margin:10px auto;
 }
-input[type="text"]
-{
-	border-style:solid none;
-        border-color:#8d1231;
-        border-top-width:4px;
-        border-bottom-width:9px;
-	width:300px;
-        margin:0px;
-        
-	padding:5px 0px 0px 0px;       
-        height:21px;
-}
-img.search-surround
-{
-	margin:0px;
-	padding:0px;
-	position:relative;
-        top:17px;
-}
-input[type="image"].search-button
-{
-	position:relative;
-	top:26px;
-}
+
+
 div#header
 {
 	text-align:center;
@@ -94,44 +63,24 @@ div#header span
 	top:-10px;
 	left:62px;
 }
+div#wrapper
+{
+	border:solid 5px #8f0f30;
+	-moz-border-radius: 30px;	
+	-webkit-border-radius: 30px;
+	margin: 0px auto;
+	width:646px;
+	padding:5px;
+}
 div#content
 {
-	width:900px;
+	width:645px;
 	margin:0px auto;
         background-color:#b8ab9a;
-	-moz-border-radius: 10px;	
-	-webkit-border-radius: 10px;	
+	-moz-border-radius: 20px;	
+	-webkit-border-radius: 20px;	
 }
-div#search{
-	background-color:#ebe7de;
-	margin:0px auto;
-	/*border: solid 1px #FFFFFF;*/
-	padding:30px;
-	width:840px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	-webkit-border-radius-topleft: 10px;
-	-webkit-border-radius-topright: 10px;
-}
-div#footer a{
-	color:#f2e5d5;
-	text-decoration:none;
-	text-transform:capitalize;
-	font-size:9px;
-}
-div#footer ul{
-	width:335px;
-	margin: 10px auto;
-	padding: 0px;
-	
-}
-div#footer ul li
-{
-	float:left;
-	margin:3px;
-	font-size:x-small;
-	list-style-type:none;
-}
+
 ul
 {
 	margin:0px auto;
@@ -162,6 +111,8 @@ img.politician_picture
 {
 	float:left;
 	background-color:#FFFFFF;
+	width:66px;
+	height:85px;
   	/*margin: 1em;	*/
 }
 div.politician_name
@@ -174,7 +125,6 @@ div.politician_name
 div.politician_address
 {
 	float:left;
- 	
 	width:265px
 }
 
@@ -185,7 +135,7 @@ div.politician_address
 
 div#tools {
   width: 444px;
-  margin: 30px auto;
+  margin: 30px auto 0px auto;
   text-align: center;
 }
 
@@ -196,3 +146,99 @@ div#tools div.tool_type {
   margin: 10px;
   text-align: center;
 }
+br.clear 
+{
+	clear:both;
+}
+
+/*Search Styles*/
+div#search input[type="text"]
+{
+	border-style:solid none;
+        border-color:#8d1231;
+        border-top-width:4px;
+        border-bottom-width:9px;
+	width:266px;
+        margin:1px 0px 0px 0px;
+        
+	padding:5px 0px 0px 0px;       
+        height:21px;
+	
+	float:left;	
+}
+
+div#search form{
+	margin: 0px auto;
+	width: 376px;
+	padding-left:37px;
+	padding-top:38px;
+}
+div#search h2
+{
+	color:#8D1231;
+	font-size:17px;
+        letter-spacing:-2px;
+	font-family:Verdana;
+	/*position:relative;
+	top:25px;
+	left:10px*/
+	margin:7px 0px 6px 13px;
+	padding:0px;
+}
+
+img.search-surround
+{
+	float:left;
+	margin:1px 0px 0px;
+	padding:0px;      
+}
+input[type="image"].search-button
+{
+	position:relative;
+	top:-8px;
+	left:-19px;
+	float:right;
+}
+div#search{
+	background-color:#ebe7de;
+	margin:0px auto 10px auto;
+	/*border: solid 1px #FFFFFF;*/
+	padding:0px;
+	width:645px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-top-right-radius: 20px;  
+	-webkit-border-top-left-radius: 20px;  
+}
+
+/*footer styles*/
+div#footer 
+{
+	margin-top:3px;
+}
+div#footer a{
+	color:#f2e5d5;
+	text-decoration:none;
+	text-transform:capitalize;
+	/*font-size:12px;*/
+}
+div#footer ul{
+	width:505px;
+	margin: 0px auto;
+	padding: 0px;
+	
+	
+}
+div#footer ul li.first
+{
+	border:none;
+}
+div#footer ul li
+{
+	float:left;
+	margin:0px;
+	padding:0px 5px;
+	list-style-type:none;
+	border-left:solid 1px #f2e5d5;
+}
+

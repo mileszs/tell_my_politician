@@ -12,20 +12,22 @@
       <h1><a href="/">TellMyPolitician</a></h1>
 		<span> Contact Your Representative</span>
 	</div>
-	<div id="content">
-		<%= render :partial => 'layouts/flashes' %>
-		<%= yield %>		
+	<div id="wrapper">
+		<div id="content">
+			<%= render :partial => 'layouts/flashes' %>
+			<%= yield %>		
+		</div>
+		<div id="footer">
+			<ul>
+				<li class="first"><%= link_to "Add TellMyPolitician To Your Site" , instructions_url%></li>
+				<li><%= link_to "About Us", intouch_url%></li>
+				<li><%= link_to "Blog","http://www.intouchpolitics.com/blog/"%></li>
+				<li><%= link_to "Contact Us", contact_url %></li>
+				<li><%= link_to "Privacy Policy",privacy_url %></li>
+			</ul>
+			<br class="clear"/>
+		</div>	
 	</div>
-	<div id="footer">
-		<ul>
-			<li><%= link_to "Add TellMyPolitician To Your Site" , instructions_url%></li>
-			<li><%= link_to "About Us", intouch_url%></li>
-			<li><%= link_to "Blog","http://www.intouchpolitics.com/blog/"%></li>
-			<li><%= link_to "Contact Us", contact_url %></li>
-			<li><%= link_to "Privacy Policy",privacy_url %></li>
-		</ul>
-	</div>	
-
 	<div id="getclicky">
 <script src="http://static.getclicky.com/75889.js" type="text/javascript"></script>
 <noscript><p><img alt="Clicky" width="1" height="1" src="http://static.getclicky.com/75889-db10.gif" /></p></noscript>
