@@ -1,0 +1,36 @@
+
+<div class="header">
+	<h2>Contact Us</h2>
+	<p>
+We really want to hear what you have to say, whether you love us, hate us, or just want to talk to us. Let us know what is on your mind. Considering that this site deals with politics, that likely won't be hard for you if you made it this far. 
+	</p>
+	<!-- info@tellmypolitician.com -->
+</div>
+<% form_tag('/contact', :method => :get,:id=>'contact') do %>
+	<%= label_tag 'category',"How can we help?" %>
+	<%= select_tag 'category', "<option>Press</option><option>Technical Support</option><option>Other</option" %> 	
+
+	<br/>
+
+	<%= label_tag 'email' %>
+	<%= text_field_tag 'email' %>
+
+	<br/>
+
+	<%= label_tag 'phone' %>
+	<%= text_field_tag 'phone'%>
+
+	<br/>
+
+	<%= label_tag 'subject' %>
+	<%= text_field_tag 'subject' %>
+
+	<br class="clear"/>
+
+	<%= text_area_tag 'message', nil, :rows=>10,:cols=>25 %>
+
+	<br/>
+
+	<%= submit_tag 'Send' %>
+
+<% end %>

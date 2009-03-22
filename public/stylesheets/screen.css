@@ -20,15 +20,7 @@ span.politician_name
    color:#8d1231;
    font-weight:bold;
 }
-input[type="submit"]
-{
-	border:solid 1px #FF0000;
-	font-weight:bold;
-	color:#FF0000;
-	background-color:#999;
-  padding: 0.5em;
-	margin:10px auto;
-}
+/*
 input[type="submit"]:hover
 {
 	border:solid 1px #FF0000;
@@ -38,7 +30,7 @@ input[type="submit"]:hover
   padding: 0.5em;
 	margin:10px auto;
 }
-
+*/
 
 div#header
 {
@@ -210,7 +202,67 @@ div#search{
 	-webkit-border-top-right-radius: 20px;  
 	-webkit-border-top-left-radius: 20px;  
 }
-
+/* header for all the other pages that don't have the search box */
+div.header
+{
+	background-color:#ebe7de;
+	margin:0px auto 10px auto;
+	/*border: solid 1px #FFFFFF;*/
+	padding:10px;
+	width:625px;
+	-moz-border-radius-topleft: 20px;
+	-moz-border-radius-topright: 20px;
+	-webkit-border-top-right-radius: 20px;  
+	-webkit-border-top-left-radius: 20px;  
+}
+/*contact page*/
+form#contact
+{
+	padding:10px;
+	width:460px;
+	margin:0px auto;
+}
+form#contact label
+{
+	width:113px;
+	text-align:right;
+	display:block;
+	float:left;
+	clear:left;
+	margin:3px;
+	margin-top:6px;
+	/*font-weight:bold;*/
+}
+form#contact input[type="text"]
+{
+	margin-top:3px;
+	float:left;
+	clear:right;
+	width:300px;
+}
+form#contact textarea
+{
+	margin-top:3px;
+	margin-left:119px;
+	width:300px;
+	clear:both;
+}
+form#contact select
+{
+	width:306px;
+}
+form#contact input[type="submit"]
+{
+	border:solid 4px #060D43;
+	font-weight:bold;
+	color:#8F0F30;
+	background-color:#EBE7DE;
+  	padding: 5px;
+	width:306px;
+	clear:both;
+	margin-top:3px;
+	margin-left:119px;
+}
 /*footer styles*/
 div#footer 
 {

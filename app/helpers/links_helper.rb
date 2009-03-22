@@ -1,4 +1,9 @@
 module LinksHelper
+	def WriteTwitterUrl( twitter_id )
+		if( twitter_id.length > 0)
+			'<a href=/"http://www.twitter.com/' + twitter_id + '/">twitter</a><br/>'
+		end
+	end
 	def WriteLongPartyName( party )
 		case party
 		when 'D'

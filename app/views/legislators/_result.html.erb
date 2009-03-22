@@ -11,6 +11,7 @@
 		<b>phone</b> <%= result.phone %> |
 		<b>fax</b> <%= result.fax %><br/>
 		<%= result.congress_office %><br/>
+		<%= WriteTwitterUrl(result.twitter_id )%>
 		<%= link_to result.website, result.website, {:rel=>'nofollow'} %><br/>
 		<%= link_to 'Email ' + WriteLongTitle(result.title) + ' ' + result.lastname,WriteEmailLink( result.email, result.webform ) , {:rel=>'nofollow'} %><br/>
 	</div>
