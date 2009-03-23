@@ -1,6 +1,9 @@
 ActionMailer::Base.smtp_settings = {
-    :address => "smtp.thoughtbot.com",
-    :port    => 25,
-    :domain  => "thoughtbot.com"
+    :address => "smtp.gmail.com",
+    :port    => 465,
+    :domain  => "tellmypolitician.com",
+    :authentication=> :login,
+    :user =>"requests@tellmypolitician.com",
+    :password=>"notifyus"
 }
 

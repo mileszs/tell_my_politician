@@ -20,13 +20,12 @@ class SitesController < ApplicationController
 
   def sentcontact
 	Contact.deliver_contact( 
-		:params[:category],
-		:params[:name],
-		:params[:email],
-		:params[:phone],
-		:params[:subject],
-		:params[:message]
-	)
-	
+		params[:category],
+		params[:name],
+		params[:email],
+		params[:phone],
+		params[:subject],
+		params[:message]
+	)	
   end
 end
