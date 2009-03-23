@@ -215,6 +215,10 @@ div.header
 	-webkit-border-top-right-radius: 20px;  
 	-webkit-border-top-left-radius: 20px;  
 }
+div.contentcontainer
+{
+	padding:10px;
+}
 /*contact page*/
 form#contact
 {
@@ -292,5 +296,16 @@ div#footer ul li
 	padding:0px 5px;
 	list-style-type:none;
 	border-left:solid 1px #f2e5d5;
+}
+form#contact label.error
+{
+	background-color:#EBE7DE;
+	color:#8F0F30;
+	font-weight:bold;
+	width:296px;
+	text-align:left;
+	padding:5px;
+	margin-bottom: 5px;
+	margin-left:119px;
 }
 

@@ -6,9 +6,37 @@ We really want to hear what you have to say, whether you love us, hate us, or ju
 	</p>
 	<!-- info@tellmypolitician.com -->
 </div>
-<% form_tag('/contact', :method => :get,:id=>'contact') do %>
+
+<script type="text/javascript">
+
+$().ready( 
+	function() 
+	{
+		$('#contact').validate( 
+			{
+				rules: {
+					email: "required" ,
+					message: "required"
+				},
+				messages: {
+					email: "Please supply your email so we can respond." ,
+					message: "Please supply us with some details."
+				}				
+			}
+		)	
+	}
+);
+
+</script>
+
+<% form_tag(url_for(:controller=>:sites,:action=>'sentcontact'), :method => :get,:id=>'contact') do %>
 	<%= label_tag 'category',"How can we help?" %>
 	<%= select_tag 'category', "<option>Press</option><option>Technical Support</option><option>Other</option" %> 	
+
+	<br/>
+
+	<%= label_tag 'name' %>
+	<%= text_field_tag 'name' %>
 
 	<br/>
 
