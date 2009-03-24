@@ -243,6 +243,7 @@ form#contact input[type="text"]
 	float:left;
 	clear:right;
 	width:300px;
+	border: solid 3px #EBE7DE;
 }
 form#contact textarea
 {
@@ -250,10 +251,12 @@ form#contact textarea
 	margin-left:119px;
 	width:300px;
 	clear:both;
+	border: solid 3px #EBE7DE;
 }
 form#contact select
 {
 	width:306px;
+	border: solid 1px #EBE7DE;
 }
 form#contact input[type="submit"]
 {
@@ -266,6 +269,10 @@ form#contact input[type="submit"]
 	clear:both;
 	margin-top:3px;
 	margin-left:119px;
+}
+form#contact input.required, form#contact textarea.required
+{
+	border:solid 3px #8F0F30;
 }
 /*footer styles*/
 div#footer 

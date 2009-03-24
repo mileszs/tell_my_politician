@@ -41,7 +41,7 @@ $().ready(
 	<br/>
 
 	<%= label_tag 'email' %>
-	<%= text_field_tag 'email' %>
+	<%= text_field_tag 'email' ,nil,:class=>'required'%>
 
 	<br/>
 
@@ -55,7 +55,7 @@ $().ready(
 
 	<br class="clear"/>
 
-	<%= text_area_tag 'message', nil, :rows=>10,:cols=>25 %>
+	<%= text_area_tag 'message', nil, :rows=>10,:cols=>25,:class=>'required' %>
 
 	<br/>
 
