@@ -8,7 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.toolbar 'toolbar', :controller => 'toolbar'
 
   map.privacy 'privacy', :controller => 'sites', :action => :privacy
-  map.instructions 'instructions', :controller => 'sites', :action => :instructions
+  map.instructions 'instructions', :controller => 'sites', :action => :bookmarklet
+  map.siteinstructions 'siteinstructions', :controller=>'sites', :action=>:siteinstructions
   map.contact 'contact', :controller => 'sites', :action=> :contact
 
   map.about 'about',:controller=>'sites',:action=>:about

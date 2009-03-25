@@ -18,6 +18,9 @@ class SitesController < ApplicationController
   def bookmarklet
   end
 
+  def siteinstructions
+  end
+
   def sentcontact
 	Contact.deliver_contact( 
 		params[:category],

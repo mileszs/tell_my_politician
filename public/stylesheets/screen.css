@@ -5,6 +5,9 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   font-size: 14px;
+  background-image: url('../images/design/TMP_BACKGROUND.jpg');
+  background-repeat:no-repeat;
+  background-position:top center;
 }
 h1 {
   color:#010e42;
@@ -13,8 +16,6 @@ h1 {
   width:527px;
   margin: 0px auto;
 }
-
-
 span.politician_name
 {
    color:#8d1231;
@@ -37,23 +38,16 @@ div#header
 	text-align:center;
 	
 }
-div#header h1
+div#header a
 {
-  font-family: serif;
-	margin:0px;
-}
-div#header h1 a
-{
-	margin:0px;
-  color: #333;
-  text-decoration: none;
-}
-div#header span
-{
-	font-size:small;
+	margin:0px;  
+	text-decoration: none;
 	position:relative;
-	top:-10px;
-	left:62px;
+	top:57px;
+}
+div#header a img
+{
+	border:none;
 }
 div#wrapper
 {
@@ -286,7 +280,7 @@ div#footer a{
 	/*font-size:12px;*/
 }
 div#footer ul{
-	width:505px;
+	width:568px;
 	margin: 0px auto;
 	padding: 0px;
 	
