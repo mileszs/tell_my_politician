@@ -1,4 +1,11 @@
 module LinksHelper
+	def WriteImage( bioguide_id)				
+		if File.exist?("public/images/pictures/" + bioguide_id + '.jpg')
+			'<img class="politician_picture" src="./images/pictures/' + bioguide_id + '.jpg"/>'
+		else
+			'<img class="politician_picture" src="./images/design/filler-image.jpg"/>'
+		end		
+        end 
         def WriteContactUrl( title, lastname, email, webform )
                 '<a  onClick="javascript: pageTracker._trackPageview("_trackEmailReferral");" href="' + WriteEmailLink( email, webform ) + '" rel="nofollow">Write ' + WriteLongTitle(title) + ' ' + lastname + '</a><br/>'
         end
