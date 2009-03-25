@@ -1,7 +1,13 @@
 module LinksHelper
+        def WriteContactUrl( title, lastname, email, webform )
+                '<a href="' + WriteEmailLink( email, webform ) + '" rel="nofollow">Contact ' + WriteLongTitle(title) + ' ' + lastname + '</a><br/>'
+        end
+        def WriteWebsiteUrl( url, title)
+		'<a href="' + url + '" rel="nofollow">' + WriteLongTitle(title) + '&#39;s Homepage</a><br/>'		
+        end
 	def WriteTwitterUrl( twitter_id )
 		if( twitter_id.length > 0)
-			'<a href=/"http://www.twitter.com/' + twitter_id + '/">twitter</a><br/>'
+			'<a href="http://www.twitter.com/' + twitter_id + '" rel="nofollow">twitter</a><br/>'
 		end
 	end
 	def WriteLongPartyName( party )
@@ -23,7 +29,7 @@ module LinksHelper
 		end
 	end
 	def WriteEmailLink( email, webform )
-		if webform.length > 0
+		if webform.upcase != 'NONE'
 			webform.to_s
 		else email.length > 0
 			'mailto:' + email.to_s

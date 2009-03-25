@@ -202,7 +202,7 @@ div.header
 	background-color:#ebe7de;
 	margin:0px auto 10px auto;
 	/*border: solid 1px #FFFFFF;*/
-	padding:10px;
+	padding:15px 10px 10px 10px;	
 	width:625px;
 	-moz-border-radius-topleft: 20px;
 	-moz-border-radius-topright: 20px;
@@ -222,7 +222,7 @@ form#contact
 }
 form#contact label
 {
-	width:113px;
+	width:120px;
 	text-align:right;
 	display:block;
 	float:left;
@@ -242,7 +242,7 @@ form#contact input[type="text"]
 form#contact textarea
 {
 	margin-top:3px;
-	margin-left:119px;
+	margin-left:126px;
 	width:300px;
 	clear:both;
 	border: solid 3px #EBE7DE;
@@ -262,7 +262,7 @@ form#contact input[type="submit"]
 	width:306px;
 	clear:both;
 	margin-top:3px;
-	margin-left:119px;
+	margin-left:126px;
 }
 form#contact input.required, form#contact textarea.required
 {
@@ -280,7 +280,7 @@ div#footer a{
 	/*font-size:12px;*/
 }
 div#footer ul{
-	width:568px;
+	width:530px;
 	margin: 0px auto;
 	padding: 0px;
 	
