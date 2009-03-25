@@ -1,13 +1,13 @@
 module LinksHelper
         def WriteContactUrl( title, lastname, email, webform )
-                '<a href="' + WriteEmailLink( email, webform ) + '" rel="nofollow">Write ' + WriteLongTitle(title) + ' ' + lastname + '</a><br/>'
+                '<a  onClick="javascript: pageTracker._trackPageview("_trackEmailReferral");" href="' + WriteEmailLink( email, webform ) + '" rel="nofollow">Write ' + WriteLongTitle(title) + ' ' + lastname + '</a><br/>'
         end
         def WriteWebsiteUrl( url, title)
-		'<a href="' + url + '" rel="nofollow">' + WriteLongTitle(title) + '&#39;s Homepage</a><br/>'		
+		'<a href="' + url + '" rel="nofollow"  onClick="javascript: pageTracker._trackPageview("_trackHomepageReferral");">' + WriteLongTitle(title) + '&#39;s Homepage</a><br/>'		
         end
 	def WriteTwitterUrl( twitter_id )
 		if( twitter_id.length > 0)
-			'<a href="http://www.twitter.com/' + twitter_id + '" rel="nofollow">Twitter</a><br/>'
+			'<a href="http://www.twitter.com/' + twitter_id + '" rel="nofollow"  onClick="javascript: pageTracker._trackPageview("_trackTwitterReferral");">Twitter</a><br/>'
 		end
 	end
 	def WriteLongPartyName( party )
