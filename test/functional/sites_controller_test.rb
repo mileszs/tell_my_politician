@@ -31,13 +31,6 @@ class SitesControllerTest < ActionController::TestCase
     should_respond_with :success
   end
 
-  context "on GET to :intouch" do
-    setup { get :intouch }
-    should_render_template :intouch
-    should_not_set_the_flash
-    should_respond_with :success
-  end
-
   context "on GET to :bookmarklet" do
     setup { get :bookmarklet }
     should_render_template :bookmarklet
