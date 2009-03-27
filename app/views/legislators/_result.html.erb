@@ -11,9 +11,9 @@
 		<b>phone</b> <%= result.phone %> |
 		<b>fax</b> <%= result.fax %><br/>
 		<%= result.congress_office %><br/>
-		<%= WriteTwitterUrl(result.twitter_id )%>
-		<%= WriteWebsiteUrl( result.website, result.title ) %>
-                <%= WriteContactUrl( result.title, result.lastname, result.email, result.webform ) %>		
+		<%= WriteTwitterUrl( result.twitter_id, result.title, result.firstname, result.lastname ) %>
+		<%= WriteWebsiteUrl( result.website, result.title, result.firstname, result.lastname ) %>
+                <%= WriteContactUrl( result.title, result.firstname, result.lastname, result.email, result.webform ) %>		
 	</div>
 	<br style="clear:both" />
 </li>
