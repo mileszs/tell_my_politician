@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.resources :legislators, :only => [:index], :collection => { :search => :get }
-  map.search 'search', :controller => 'legislators', :action => :search
+  map.search 'search', :controller => 'legislators', :action => 'search'
 
   map.root :controller => 'sites', :action => :home
 

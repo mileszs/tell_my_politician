@@ -90,18 +90,20 @@ class LegislatorsControllerTest < ActionController::TestCase
 
   def new_legislator(attrs = {})
     Legislator.new({
-    'title' =>        'Sen',
-    'firstname' =>    'Miles',
-    'middlename' =>   'Zane',
-    'lastname' =>     'Sterrett',
-    'party' =>        'I',
-    'state' =>        'IN',
-    'district' =>     'Junior Seat',
-    'in_office' =>    '1',
-    'gender' =>       'M',
-    'website' =>      'http://mileszs.com',
-    'webform' =>      'http://mileszs.com',
-    'email' =>        'miles.sterrett@gmail.com'
+    'title'       => 'Sen',
+    'firstname'   => 'Miles',
+    'middlename'  => 'Zane',
+    'lastname'    => 'Sterrett',
+    'party'       => 'I',
+    'state'       => 'IN',
+    'district'    => 'Junior Seat',
+    'in_office'   => '1',
+    'gender'      => 'M',
+    'website'     => 'http://mileszs.com',
+    'webform'     => 'http://mileszs.com',
+    'email'       => 'miles.sterrett@gmail.com',
+    'bioguide_id' => '8',
+    'twitter_id'  => ''
     }.merge(attrs))
   end
 
