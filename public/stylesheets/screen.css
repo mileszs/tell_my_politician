@@ -66,7 +66,9 @@ div#content
 	-moz-border-radius: 20px;	
 	-webkit-border-radius: 20px;	
 }
-
+div#content a:hover {
+  color: #8D1231;
+}
 ul
 {
 	margin:0px auto;
@@ -286,8 +288,6 @@ div#footer ul{
 	width:530px;
 	margin: 0px auto;
 	padding: 0px;
-	
-	
 }
 div#footer ul li.first
 {
@@ -301,6 +301,11 @@ div#footer ul li
 	list-style-type:none;
 	border-left:solid 1px #f2e5d5;
 }
+
+div#footer ul li a:hover {
+  color: #8D1231;
+}
+
 form#contact label.error
 {
 	background-color:#EBE7DE;

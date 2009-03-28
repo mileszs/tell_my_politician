@@ -15,7 +15,6 @@ class LegislatorsController < ApplicationController
       cookies["lat"] = lat = location.latitude.to_s
       cookies["long"] = long = location.longitude.to_s
     else
-      zip = cookies["zip"]
       lat = cookies["lat"]
       long = cookies["long"]
     end
