@@ -9,6 +9,9 @@ body {
   background-repeat:no-repeat;
   background-position:top center;
 }
+img {
+	border:none;
+}
 h1 {
   color:#010e42;
   text-transform:uppercase;
@@ -129,11 +132,12 @@ div#tools {
 
 div#tools div.tool_type {
   float: left;
-  border: 1px solid #999;
+ /* border: 1px solid #999;*/
   width: 200px;
   margin: 10px;
   text-align: center;
 }
+
 br.clear 
 {
 	clear:both;

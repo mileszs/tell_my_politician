@@ -1,6 +1,6 @@
 <%= render :partial => 'legislators/search_form' %>
 <div id="tools">
-  <div class="tool_type"><h2>Publishers</h2></div>
-  <div class="tool_type"><h2>Users</h2></div>
+  <div class="tool_type"><%= link_to( image_tag('/images/design/publishers.png'), :controller=>:sites, :action=>'siteinstructions') %></div>
+  <div class="tool_type"><%= link_to( image_tag('/images/design/users.png'), :controllers=>:sites, :action=>'instructions') %> </div>
   <div style="clear: both;">&nbsp;</div>
 </div>
