@@ -1,0 +1,15 @@
+p.tellmypolitician a {
+	text-decoration: none;
+	font-style: normal;
+	color: #666;
+	font-size:12px;
+}
+
+p.tellmypolitician a:hover {
+	text-decoration: underline;
+}
+
+
+p.tellmypolitician img {
+	margin: 1px 5px -5px 0;
+}
