@@ -11,7 +11,7 @@ var bookmarkletHeight = '257px';
 var ELcontainer = document.createElement('div');
 ELcontainer.id = 'tmp_holder';
 ELcontainer.style.width = bookmarkletWidth;
-ELcontainer.style.height = '257px';
+ELcontainer.style.height = bookmarkletHeight;
 
 
 //we need a iframe that will load data from tmp.com
@@ -21,6 +21,7 @@ ELframe.src = 'http://tellmypolitician.com/search?u='+ CurrentUrl + '&title=' + 
 ELframe.width='100%';
 ELframe.height='100%';
 ELframe.setAttribute('scrolling','no');
+ELframe.setAttribute('frameborder','0');
 ELcontainer.appendChild(ELframe);
 
 //next we need a div that can hold the logo
@@ -43,12 +44,14 @@ ELcontainer.appendChild(ELlogo);
 document.body.appendChild(ELcontainer);
 
 var ELsheet = document.createElement('style')
-var sheet = "#tmp_holder { position:absolute; top:10px; right:10px; z-index:100000; padding:15px; background-color:#001937; border:5px solid #8F0F30; -moz-border-radius:30px;}";
+var sheet = "#tmp_holder { position:absolute; top:10px; right:10px; z-index:100000; padding:15px; background-color:#001937; border:5px solid #8F0F30; -moz-border-radius:30px; -webkit-border-radius: 30px; }";
 sheet += "#tmp_logo{ background:url('http://tellmypolitician.com/images/design/TMP_LOGO.png') no-repeat; width:387px; height:100px; margin:0px auto; position:relative; top:-42px; }";
 sheet += "#tmp_holder img { position:absolute; top:-10px; right:-12px; z-index:10000; }";
-sheet += "#tmp_holder iframe { -moz-border-radius:30px; }";
+sheet += "#tmp_holder iframe { -moz-border-radius:30px; -webkit-border-radius: 30px; overflow : hidden; }";
 ELsheet.innerHTML= sheet;
 document.body.appendChild(ELsheet);
+
+self.scrollTo(0,0);
 
 function closeBookmarklet()
 {
