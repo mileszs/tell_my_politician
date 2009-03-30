@@ -1,8 +1,2 @@
 <%= render :partial=>'link' unless @link.blank? %>
-
-<% if @results != nil %>
-	 <%= render :partial => 'search_form', :locals => { :cssClassName => "contentcontainer" }  %>
-<% else %>
-	<%= render :partial => 'result'%>
-<% end %>
-
+<%= render :partial => 'search_form', :locals => { :cssClassName => "contentcontainer" }  %>
