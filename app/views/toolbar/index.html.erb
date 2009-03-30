@@ -1,67 +1,10 @@
-<script type="text/javascript" language="javascript">
-  function removeToolbar()
-  {
-     var ELiframe = document.getElementById('TMP__mainframe');
-     if( ELiframe != null )
-     {
-	var url = ELiframe.src;
-        document.location.assign(url);
-     } else {       
-	$('TMP__toolbar').hide('fast');
-     }
-  }
-
- function sizeIFrame() {
-	var helpFrame = jQuery("#TMP__mainframe");
-	var innerDoc = (helpFrame.get(0).contentDocument) ? helpFrame.get(0).contentDocument : helpFrame.get(0).contentWindow.document;
-	helpFrame.height(innerDoc.body.scrollHeight + 35);
-}
-jQuery(function() {
-sizeIFrame();
-jQuery("#helpFrame").load(sizeIFrame);
-});
-</script>
-<style type="text/css">
-   body
-   {
-     background-image:none;
-   }
-   div.TMP__toolbar
-   {
-     background-color:#EBE7DE;
-     border-bottom: 5px solid #8F0F30;
-     height:50px;
-   }
-   div.TMP__toolbar img
-   {
-	position:relative;
-/*	top:-21px;*/
-	z-index:5000;
-	margin:0px auto;
-	display:block;
-   }
-   div.TMP__toolbar a
-   {
-	margin:3px;
-	text-decoration:none;
-       
-   }
-   div.TMP__toolbar a.left
-   {
-	float:left;   
-	clear:left;    
-   }
-   div.TMP__toolbar a.right
-   {
-	float:right;
-	clear:right;       
-   }
-</style>
 <div class="TMP__toolbar">
    <a class="right" href="javascript:removeToolbar();" ref="nofollow">Remove Toolbar From this page</a>
    <a class="right" href="<%= @search_url %>" ref="nofollow">Go back to Legislators List</a>
    <a class="left" href="<%= @original_url %>" ref="nofollow">Return to your original site</a>
    <%= image_tag "/images/design/TMP_LOGO.png" %>
 </div>
-<iframe style="width:100%;height:100%;min-height:100%;"  frameborder="0" height="100%" width="100%" id="TMP__mainframe" name="TMP__mainframe" src="<%= @target_url %>" >
+<div id="iframewrapper">
+<iframe frameborder="0" width="100%" height="100%" id="TMP__mainframe" name="TMP__mainframe" src="<%= @target_url %>" >
 </iframe>
+</div>
