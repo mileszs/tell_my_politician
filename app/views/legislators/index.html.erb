@@ -1,13 +1,4 @@
 <%= render :partial => 'search_form' %>
 
-<h1>Senators</h1>
-<ul class="senators">
-  <%= render :partial => 'result', :object => @results[:senior_senator] -%>
-  <%= render :partial => 'result', :object => @results[:junior_senator] -%>
-</ul>
-
-<h1>House Representative</h1>
-<ul class="representative">
-  <%= render :partial => 'result', :object => @results[:representative] -%>
-</ul>
+<%= render :partial => 'results', :object => @results %>
 <br style="clear:both"/>

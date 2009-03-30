@@ -1,0 +1,10 @@
+<h1>Senators</h1>
+<ul class="senators">
+  <%= render :partial => 'legislator', :object => results[:senior_senator] -%>
+  <%= render :partial => 'legislator', :object => results[:junior_senator] -%>
+</ul>
+
+<h1>House Representative</h1>
+<ul class="representative">
+  <%= render :partial => 'legislator', :object => results[:representative] -%>
+</ul>
