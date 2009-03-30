@@ -192,15 +192,8 @@ input[type="image"].search-button
 	float:right;
 }
 div#search{
-	background-color:#ebe7de;
-	margin:0px auto 10px auto;
-	/*border: solid 1px #FFFFFF;*/
 	padding:0px;
 	width:645px;
-	-moz-border-radius-topleft: 20px;
-	-moz-border-radius-topright: 20px;
-	-webkit-border-top-right-radius: 20px;  
-	-webkit-border-top-left-radius: 20px;  
 }
 /* header for all the other pages that don't have the search box */
 div.header

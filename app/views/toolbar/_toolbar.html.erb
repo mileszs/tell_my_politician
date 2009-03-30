@@ -10,11 +10,20 @@
 	$('TMP__toolbar').hide('fast');
      }
   }
+  function sizeIFrame()
+  {
+	//need to make this I frame as big as the window.
+	var ELiframe = document.getElementById('TMP__mainframe');
+	var ELtoolbar = document.getElementById('TMP__toolbar');
+	//ELiframe.style.height = document.documentElement.­clientHeight - ELtoolbar.style.height;
+  }
+  sizeIFrame();
 </script>
 <style type="text/css">
    div.TMP__toolbar
    {
      background-color:#cccccc;
+     margin: 5px solid #8F0F30;
    }
 </style>
 <div class="TMP__toolbar">
