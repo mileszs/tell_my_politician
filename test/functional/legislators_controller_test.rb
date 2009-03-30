@@ -16,7 +16,6 @@ class LegislatorsControllerTest < ActionController::TestCase
         get :search, :link => { :url => 'http://google.com' }
       end
       should_assign_to :link
-      should_assign_to :user
       should_render_template :search
       should_not_set_the_flash
       should_respond_with :success
@@ -28,7 +27,6 @@ class LegislatorsControllerTest < ActionController::TestCase
         get :search, :link => { :url => 'http://google.com' }
       end
       should_assign_to :link
-      should_assign_to :user
       should_not_set_the_flash
       should_redirect_to "legislators_url"
     end
