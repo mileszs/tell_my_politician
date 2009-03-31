@@ -50,7 +50,8 @@ var sheet = "#tmp_holder { position:absolute; top:10px; right:10px; z-index:1000
 sheet += "#tmp_logo{ background:url('" + Server + "/images/design/TMP_LOGO.png') no-repeat; width:387px; height:100px; margin:0px auto; position:relative; top:-42px; }";
 sheet += "#tmp_holder img { position:absolute; top:-10px; right:-12px; z-index:10000; }";
 sheet += "#tmp_holder iframe { -moz-border-radius:30px; -webkit-border-radius: 30px; overflow : hidden; }";
-ELsheet.innerHTML= sheet;
+ELsheet.appendChild( sheet);
+//ELsheet.innerHTML= sheet;
 document.body.appendChild(ELsheet);
 
 self.scrollTo(0,0);
