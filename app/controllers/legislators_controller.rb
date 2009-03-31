@@ -54,6 +54,12 @@ class LegislatorsController < ApplicationController
       cookies["zip"] = zip = location.postal_code
       cookies["lat"] = lat = location.latitude.to_s
       cookies["long"] = long = location.longitude.to_s
+    elsif params[:zip]
+      @address = params[:zip]
+      location = Geocoding::get(params[:zip]).first
+      cookies["zip"] = zip = location.postal_code
+      cookies["lat"] = lat = location.latitude.to_s
+      cookies["long"] = long = location.longitude.to_s
     else
       lat = cookies["lat"]
       long = cookies["long"]
