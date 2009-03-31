@@ -228,7 +228,8 @@ div.header
 div.contentcontainer
 {
 	padding:10px;
-	font-family:serif;
+	font-family:Verdana;
+        color:#000;
 	font-size:14px;
 	line-height:1.5em;
 }
