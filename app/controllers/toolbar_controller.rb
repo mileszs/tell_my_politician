@@ -5,7 +5,7 @@ class ToolbarController < ApplicationController
 
     #the search_url is our pages that lists their legislators
     #what happens if cookies aren't enabled? My guess is we don't have to worry about this?
-    @search_url = "http://tellmypoliticial.com/" + cookies["zip"]
+    @search_url = "http://tellmypolitician.com/" + cookies["zip"]
 
     #the target_url is the legislators contact form.
     #this will most likely be passed by a query string from the previous page.
