@@ -133,15 +133,16 @@ div#tools {
 div#tools div.tool_type {
   float: left;
  /* border: 1px solid #999;*/
+  background-repeat:no-repeat;
   width: 187px;
-  height:225px;
+  height:240px;
   margin: 10px;
   text-align: center;
 }
 div#tools div.tool_type div {
    margin: 92px 23px 0px 23px;
    font-size:14px;
-   color:#B8AB9A;
+   color:#B8AB9A;   
    font-weight:bold;
    font-family:Helvetica;
 }
@@ -151,7 +152,7 @@ div#tools div.tool_type div a {
    font-size:10px;
    color:#FFF;
    font-weight:bold;
-   font-family:verdana;
+   font-family:Verdana;
    text-decoration:none;
 }
 br.clear 

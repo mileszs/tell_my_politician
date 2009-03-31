@@ -3,9 +3,9 @@ require 'cgi'
 
 	def WriteImage( bioguide_id)				
 		if File.exist?("public/images/pictures/" + bioguide_id + '.jpg')
-			'<img class="politician_picture" src="./images/pictures/' + bioguide_id + '.jpg"/>'
+			'<img class="politician_picture" src="/images/pictures/' + bioguide_id + '.jpg"/>'
 		else
-			'<img class="politician_picture" src="./images/design/filler-image.jpg"/>'
+			'<img class="politician_picture" src="/images/design/filler-image.jpg"/>'
 		end		
         end 
         def WriteContactUrl( title, firstname, lastname, email, webform )
