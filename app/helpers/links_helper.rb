@@ -14,7 +14,7 @@ module LinksHelper
   end
 
   def WriteWebsiteUrl( url, title,firstname, lastname)
-    '<a href="' + topafy(url) + '" rel="nofollow"  onClick="javascript: pageTracker._trackPageview("/website/' + title + '/' + firstname + '_' + lastname + '");">' + WriteLongTitle(title) + '&#39;s Homepage</a><br/>'
+    '<a href="' + topify(url) + '" rel="nofollow"  onClick="javascript: pageTracker._trackPageview("/website/' + title + '/' + firstname + '_' + lastname + '");">' + WriteLongTitle(title) + '&#39;s Homepage</a><br/>'
   end
 
   def WriteTwitterUrl( twitter_id , title, firstname, lastname )
@@ -49,7 +49,7 @@ module LinksHelper
     if webform.upcase != 'NONE'
       str = '/toolbar?target_url=' + CGI.escape(webform.to_s)
       str +=  '&u=' + link_url unless link_url.blank?
-      str = topafy( str )
+      str = topify( str )
     else email.length > 0
       str = 'mailto:' + email.to_s
     end
@@ -63,7 +63,7 @@ module LinksHelper
       str
     end
   end
-  def topafy( nUrl )
+  def topify( nUrl )
     'javascript:window.top.location=\'' + nUrl + '\''
   end
   def results_title(district, state)
