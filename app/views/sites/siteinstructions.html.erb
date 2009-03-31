@@ -4,7 +4,7 @@
 <div class="contentcontainer">
 
 <p>
-People are most likely to contact their politicians when they read or watch the news. That is why at TellMyPolitician we want to help users act on those urges to get their voices heard. Not only will users contact their politician from your site, but they will be sharing your original content with them.
+With the TellMyPolitician Button users click the button on your site to share content with their politicians, much like they would click a Digg, Reddit, Or StumbleUpon button to share your content across the web. We understand that people are most likely to contact their politicians when they read or watch the news. That is why at TellMyPolitician we want to help users act on those urges to get their voices heard. Not only will users contact their politician from your site, but they will be sharing your original content with them.
 </p>
 <p>
 As a publisher it is now simple to give your users this opportunity. TellMyPolitician has developed several ways for you to integrate our service into your site, with many more to come.
@@ -18,9 +18,21 @@ As a publisher it is now simple to give your users this opportunity. TellMyPolit
 
 <h2><a name="JSButton">Javascript Button</a></h2>
 <p>
-To add TellMyPolitician to your site simply copy and paste the code snippet below between the <body> and the </body> tags in your site. You can also add the code below to your template files to easily added to all the desired pages on your site. Feel free to customize this code any way you need to get it to work in your site.
+To add TellMyPolitician to your site simply copy and paste the code snippet below between the <body> and the </body> tags in your site. You can also add the code below to your template files to easily added to all the desired pages on your site. Even include it with other social bookmarking tools your site already uses. Feel free to customize this code any way you need to get it to work in your site.
 </p>
-
+<pre>
+<code>
+<script type="text/javascript">
+function tmp_click() {
+   var url = escape(location.href);
+   var title = escape(document.title);
+   document.top.location='http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+   return false;
+}
+</script>
+<a href="http://tellmypolitician.com/search?" title="Find your politician and pick which one you would like to share the following link with." onclick="return tmp_click()" target="_blank"> Send to your legislator</a>
+</code>
+</pre>
 <h2><a name="wordpress">Wordpress Plugin</a></h2>
 <p>
 This plugin adds a footer link to share the current post or page with your politician using TellMyPolitician.com. While the plugin is activated a link will appear after the content of the post with the text &quot;TellMyPolitician&quot; or the TellMyPolitician icon or both. Clicking this link will bring the user to the TellMyPolitician site. Once on TellMyPolitician the user will be directed to input their address, to find their politician. Then when they click to email a politician they will have the ability to copy and past your site link into the email field, to tell the politican about the article on your site.
@@ -42,6 +54,19 @@ Download the <a href="http://tellmypolitician.com/files/tellmypolitician-plugin.
 <p>
 For those who use blogger, copy the code snippett below and <a href="http://help.blogger.com/bin/answer.py?answer=53220&topic=12488">follow the instructions by Google to install our button on your site</a>.
 </p>
+<pre>
+<code>
+<script type="text/javascript">
+function tmp_click() {
+   var url = escape(location.href);
+   var title = escape(document.title);
+   document.top.location='http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+   return false;
+}
+</script>
+<a href="http://tellmypolitician.com/search?" title="Find your politician and pick which one you would like to share the following link with." onclick="return tmp_click()" target="_blank"> Send to your legislator</a>
+</code>
+</pre>
 <h2><a name="more">More To Come...</a></h2>
 <p>
 We will be adding new ways to add TellMyPolitician all the time. If you have any special requests please feel free to <a href="http://www.tellmypolitician.com/contact">contact us</a>.
