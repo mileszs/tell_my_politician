@@ -1,19 +1,24 @@
 <%= render :partial => 'legislators/search_form' %>
 
 <div id="tools">
-  <div class="tool_type">
+  <div class="tool_type" style="background-image:url('/images/design/chevron_publishers.png');">
+	<div>Allow citizens to contact their politicians from your site.
 	<%= link_to( 
-		image_tag('/images/design/publishers.png'), 
+		'click here for more info', 
 		:controller=>:sites, 
 		:action=>'siteinstructions') 
 	%>
+        </div>
   </div>
-  <div class="tool_type">
+  <div class="tool_type" style="background-image:url('/images/design/chevron_users.png');">
+        <div>
+	Contact your politician from any site with our bookmarklet.
 	<%= link_to( 
-		image_tag('/images/design/users.png'), 
+		'click here for more info', 
 		:controller=>:sites, 
 		:action=>'instructions') 
 	%> 
+        </div>
   </div>
   <div style="clear: both;">&nbsp;</div>
 </div>

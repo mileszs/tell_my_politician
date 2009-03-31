@@ -12,7 +12,7 @@ class ToolbarController < ApplicationController
         @target_url= params[:target_url]
 
         #here we need to go ahead and write out the link_destination.
-	
+
 
   end
 end
