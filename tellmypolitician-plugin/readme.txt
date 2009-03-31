@@ -13,7 +13,7 @@ This plugin adds a footer link to share the current post or page with your polit
 == Installation ==
 1. Add the folder called tellmypolitician-plugin (without the quotes) to your '/wp-content/plugins/' directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-1. Go to 'Settings-> TellMyPolitician' in your admin interface to select you options.
+1. Go to 'Settings-> TellMyPolitician' in your admin interface to select your options.
 
 == CSS ==
 The CSS for this plugin is found in the included tellmypolitician.css file.  This file may be edited to change the style of the link.
