@@ -1,12 +1,12 @@
 #tmp_holder 
 { 
-	position:absolute; 
+	/*position:absolute; 
 	top:10px; 
 	right:10px; 
 	z-index:100000; 
 	padding:15px; 
 	background-color:#001937; 
-	border:5px solid #8F0F30; 
+	border:5px solid #8F0F30; */
 	-moz-border-radius:30px; 
 	-webkit-border-radius: 30px; 
 }
@@ -23,10 +23,10 @@
 
 #tmp_holder img 
 { 
-	position:absolute; 
+	/*position:absolute; 
 	top:-10px; 
 	right:-12px; 
-	z-index:10000; 
+	z-index:10000;*/ 
 }
 #tmp_holder iframe { 
 	-moz-border-radius:30px; 

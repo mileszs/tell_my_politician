@@ -2,8 +2,8 @@
 var CurrentUrl = escape(document.location.href);
 var CurrentTitle = escape(document.title);
 var CurrentVersion = '1';
-//var Server = "http://localhost:3000"; //development
-var Server = "http://tellmypolitician.com"; //production
+var Server = "http://localhost:3000"; //development
+//var Server = "http://tellmypolitician.com"; //production
 
 //set some constants just so I don't have to change them in 5 places
 var bookmarkletWidth = '645px';
@@ -14,6 +14,13 @@ var ELcontainer = document.createElement('div');
 ELcontainer.id = 'tmp_holder';
 ELcontainer.style.width = bookmarkletWidth;
 ELcontainer.style.height = bookmarkletHeight;
+ELcontainer.style.position = 'absolute';
+ELcontainer.style.top = '10px';
+ELcontainer.style.right = '10px';
+ELcontainer.style.zIndex = '5000';
+ELcontainer.style.padding = '15px';
+ELcontainer.style.backgroundColor = '#001937';
+ELcontainer.style.border = '5px solid #8f0f30';
 
 
 //we need a iframe that will load data from tmp.com
@@ -29,10 +36,21 @@ ELcontainer.appendChild(ELframe);
 //next we need a div that can hold the logo
 var ELlogo = document.createElement('div');
 ELlogo.id = 'tmp_logo';
+//ELlogo.style.background = "url('http://tellmypolitician.com/images/design/TMP_LOGO.png') no-repeat";
+ELlogo.style.width = '387px';
+ELlogo.style.height = '100px';
+ELlogo.style.margin = '0px auto';
+ELlogo.style.position = 'relative';
+ELlogo.style.top = '-42px;'
 
 //we need a close button as well
 var ELcloseImage = document.createElement('img');
 ELcloseImage.src = Server + '/images/bookmarklet/close.png';
+
+ELcloseImage.style.position = 'absolute';
+ELcloseImage.style.top = '-10px';
+ELcloseImage.style.right = '-12px';
+ELcloseImage.style.zIndex = '1000';
 
 if (window.addEventListener) { 	// Mozilla, Netscape, Firefox
        ELcloseImage.addEventListener('click', closeBookmarklet, false);
@@ -45,15 +63,8 @@ ELcontainer.appendChild(ELcloseImage);
 ELcontainer.appendChild(ELlogo);
 document.body.appendChild(ELcontainer);
 
-var cssFile = document.createElement("link");
-cssFile.setAttribute("rel","stylesheet");
-cssFile.setAttribute("type","text/css");
-cssFile.setAttribute(Server + "/stylesheets/bookmarklet.css");
 
-if(typeof cssFile != "undefined")
-{
-   document.getElementByTagName("head")[0].appendChild(cssFile);
-}
+
 
 self.scrollTo(0,0);
 
