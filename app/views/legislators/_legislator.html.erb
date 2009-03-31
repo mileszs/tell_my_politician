@@ -13,7 +13,7 @@
 		<%= legislator.congress_office %><br/>
 		<%= WriteTwitterUrl( legislator.twitter_id, legislator.title, legislator.firstname, legislator.lastname ) %>
 		<%= WriteWebsiteUrl( legislator.website, legislator.title, legislator.firstname, legislator.lastname ) %>
-                <%= WriteContactUrl( legislator.title, legislator.firstname, legislator.lastname, legislator.email, legislator.webform ) %>		
+                <%= WriteContactUrl( legislator.title, legislator.firstname, legislator.lastname, legislator.email, legislator.webform, @link.url ) %>
 	</div>
 	<br style="clear:both" />
 </li>

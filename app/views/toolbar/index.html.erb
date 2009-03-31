@@ -1,7 +1,9 @@
 <div class="TMP__toolbar">
    <a class="right" href="javascript:removeToolbar();" ref="nofollow"><%= image_tag "/images/bookmarklet/close.png" %></a>
    <a class="right" href="<%= @search_url %>" ref="nofollow">Go back to Legislators List</a>
-   <a class="left" href="<%= @original_url %>" ref="nofollow">Return to your original site</a>
+   <% unless @original_url.blank? %>
+     <a class="left" href="<%= @original_url %>" ref="nofollow">Return to your original site</a>
+   <% end %>
    <%= image_tag "/images/design/TMP_LOGO.png" %>
 </div>
 <div id="iframewrapper">
