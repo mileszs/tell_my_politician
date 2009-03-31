@@ -68,6 +68,10 @@ div#header a img
 {
 	border:none;
 }
+div.header h2
+{
+   margin-top:25px;
+}
 div#wrapper
 {
 	border:solid 5px #8f0f30;
