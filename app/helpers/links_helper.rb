@@ -1,4 +1,6 @@
 module LinksHelper
+require 'cgi'
+
 	def WriteImage( bioguide_id)				
 		if File.exist?("public/images/pictures/" + bioguide_id + '.jpg')
 			'<img class="politician_picture" src="./images/pictures/' + bioguide_id + '.jpg"/>'
@@ -37,7 +39,7 @@ module LinksHelper
 	end
 	def WriteEmailLink( email, webform )
 		if webform.upcase != 'NONE'
-			webform.to_s
+			'/toolbar?target_url=' + CGI.escape(webform.to_s)
 		else email.length > 0
 			'mailto:' + email.to_s
 		end

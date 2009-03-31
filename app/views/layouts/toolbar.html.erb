@@ -3,9 +3,67 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title><%= yield(:title) || "TellMyPolitician" %></title>
-    <%= stylesheet_link_tag 'screen', :media => 'all', :cache => true %>
+    <title><%= yield(:title) || "TellMyPolitician" %></title>   
     <%= javascript_include_tag :defaults, :cache => true %>
+<script type="text/javascript" language="javascript">
+  function removeToolbar()
+  {
+     var ELiframe = document.getElementById('TMP__mainframe');
+     if( ELiframe != null )
+     {
+	var url = ELiframe.src;
+        document.location.assign(url);
+     } else {       
+	$('TMP__toolbar').hide('fast');
+     }
+  }
+  function resizeIframe() 
+  {
+     $('#iframewrapper').css('height',$(document).height()+1000);
+   };
+   $(document).ready(function(){
+	resizeIframe();
+ });
+ 
+</script>
+<style type="text/css">
+   body
+   {
+     background-image:none;
+     padding:0px;
+     margin:0px;
+   }
+   div.TMP__toolbar
+   {
+     background-color:#EBE7DE;
+     border-bottom: 5px solid #8F0F30;
+     height:50px;
+   }
+   div.TMP__toolbar img
+   {
+	position:relative;
+/*	top:-21px;*/
+	z-index:5000;
+	margin:0px auto;
+	display:block;
+   }
+   div.TMP__toolbar a
+   {
+	margin:3px;
+	text-decoration:none;
+       
+   }
+   div.TMP__toolbar a.left
+   {
+	float:left;   
+	clear:left;    
+   }
+   div.TMP__toolbar a.right
+   {
+	float:right;
+	clear:right;       
+   }
+</style>
   </head>
   <body>
      <%= yield %>		

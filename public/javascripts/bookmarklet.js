@@ -19,7 +19,7 @@ ELcontainer.style.height = bookmarkletHeight;
 //we need a iframe that will load data from tmp.com
 var ELframe = document.createElement('iframe');
 ELframe.id = 'tmp_iframe';
-ELframe.src = Server + '/search?u='+ CurrentUrl + '&title=' + CurrentTitle + '&client=' + CurrentVersion;
+ELframe.src = Server + '/bookmarklet/search?u='+ CurrentUrl + '&title=' + CurrentTitle + '&client=' + CurrentVersion;
 ELframe.width='100%';
 ELframe.height='100%';
 ELframe.setAttribute('scrolling','no');

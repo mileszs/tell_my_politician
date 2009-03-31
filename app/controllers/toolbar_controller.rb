@@ -9,10 +9,10 @@ class ToolbarController < ApplicationController
 
         #the target_url is the legislators contact form.
 	#this will most likely be passed by a query string from the previous page.
-        @target_url="http://www.donaldperry.name" #params[:target_url]
+        @target_url= params[:target_url]
 
         #here we need to go ahead and write out the link_destination.
-	
+
 
   end
 end
