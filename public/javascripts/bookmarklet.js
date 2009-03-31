@@ -2,8 +2,8 @@
 var CurrentUrl = escape(document.location.href);
 var CurrentTitle = escape(document.title);
 var CurrentVersion = '1';
-var Server = "http://localhost:3000"; //development
-//var Server = "http://tellmypolitician.com"; //production
+//var Server = "http://localhost:3000"; //development
+var Server = "http://tellmypolitician.com"; //production
 
 //set some constants just so I don't have to change them in 5 places
 var bookmarkletWidth = '645px';
