@@ -1,7 +1,14 @@
 <div class="header">
 <h2>TellMyPolitician Bookmarklet</h2>
 
-<a href="javascript:void((function(){var%20ELscript=document.createElement('script');ELscript.setAttribute('type','text/javascript');ELscript.setAttribute('src','http://tellmypolitician.com/javascripts/bookmarklet.js');document.body.appendChild(ELscript)})())">Tell My Politician</a>
+<p>Click and drag the button below to your bookmark bar.</p>
+<a class="bookmarklet" href="javascript:void((function(){var%20ELscript=document.createElement('script');ELscript.setAttribute('type','text/javascript');ELscript.setAttribute('src','http://tellmypolitician.com/javascripts/bookmarklet.js');document.body.appendChild(ELscript)})())"><%= image_tag "/images/design/TMP_BADGE.png" %>TellMyPolitician</a>
+
+<p><%= image_tag "/images/design/bookmarklet-instructions.png",:style=>"margin:10px 0px" %></p>
+
+<p>If your browser doesn't show the bookmarks bar, to to view then toolbar in the menu
+</p>
+
 </div>
 <div class="contentcontainer">
 <p>The TellMyPolitician Bookmarklet let's you contact your politicians from any site on the web, even if the site doesn't use our button. </p>
