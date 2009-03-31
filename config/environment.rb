@@ -36,6 +36,7 @@ Rails::Initializer.run do |config|
   config.gem 'json'
   config.gem 'sunlight'
   config.gem 'mbleigh-acts-as-taggable-on', :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
+  config.gem "ambethia-smtp-tls", :lib => "smtp-tls", :source => "http://gems.github.com/"
 
   
   # Only load the plugins named here, in the order given. By default, all plugins 
