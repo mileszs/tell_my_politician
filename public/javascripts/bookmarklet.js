@@ -56,7 +56,7 @@ if (window.addEventListener) { 	// Mozilla, Netscape, Firefox
        ELcloseImage.addEventListener('click', closeBookmarklet, false);
 }
 else {	// IE
-	ELcloseImage.attachEvent('onClick', closeBookmarklet);
+       ELcloseImage.attachEvent('onclick', closeBookmarklet);
 }
 
 ELcontainer.appendChild(ELcloseImage);

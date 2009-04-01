@@ -19,21 +19,23 @@ h1 {
   width:527px;
   margin: 0px auto;
 }
-a.bookmarklet
+div.bookmarklet
 {
   border:solid 3px #001937;
   background-color:#B8AB9A;
-  color:#001937;
   padding:10px 10px 10px 10px;
-  font-weight:bold;
-  text-decoration:none;
-  /*background-image: url('../images/design/TMP_BADGE.png');
-  background-repeat:no-repeat;
-  background-position:left center;*/
+  display:inline;
 }
-a.bookmarklet img
+div.bookmarklet img
 {
 	margin:3px 5px 0px 0px;
+}
+div.bookmarklet a
+{
+  color:#001937;
+  font-weight:bold;
+  text-decoration:none;
+
 }
 span.politician_name
 {
