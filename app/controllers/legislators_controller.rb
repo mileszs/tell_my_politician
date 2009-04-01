@@ -1,18 +1,12 @@
 class LegislatorsController < ApplicationController
+  layout :choose_layout
+
   def search
-    @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
-    if !cookies["zip"].to_s.blank?
-      redirect_to legislators_url(:u => params[:u])
-    end
+    setup_search(legislators_url(:u => params[:u]))
   end
 
   def bm_search
-    @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
-    if !cookies["zip"].to_s.blank?
-      redirect_to bm_legislators_url(:u => params[:u])
-    else
-      render :layout => 'bookmarklet'
-    end
+    setup_search(bm_legislators_url(:u => params[:u]))
   end
 
   def index
@@ -21,10 +15,16 @@ class LegislatorsController < ApplicationController
 
   def bm_index
     setup_index
-    render :layout => 'bookmarklet'
   end
 
   private
+
+  def setup_search(redirect_url)
+    @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
+    if !cookies["zip"].to_s.blank?
+      redirect_to redirect_url
+    end
+  end
 
   def setup_index
     if params[:address]
@@ -55,5 +55,9 @@ class LegislatorsController < ApplicationController
       :long       => long
     })
     @results = Legislator.all_for( :latitude => lat , :longitude => long )
+  end
+
+  def choose_layout
+    ['bm_search', 'bm_index'].include?(action_name) ? 'bookmarklet' : 'application'
   end
 end
