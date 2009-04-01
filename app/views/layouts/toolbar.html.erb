@@ -5,6 +5,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title><%= yield(:title) || "TellMyPolitician" %></title>   
     <%= javascript_include_tag :defaults, :cache => true %>
+    <%#= stylesheet_link_tag 'toolbar', :media => 'all', :cache => true %>
 <script type="text/javascript" language="javascript">
   function removeToolbar()
   {
@@ -26,7 +27,61 @@
  });
  
 </script>
-    <%= stylesheet_link_tag 'toolbar', :media => 'all', :cache => true %>
+<style>
+ body
+ {
+   background-image:none;
+   padding:0px;
+   margin:0px;
+ }
+ div.TMP__toolbar
+ {
+   background-color:#EBE7DE;
+   border-bottom: 5px solid #8F0F30;
+   height:50px;
+ }
+ div.TMP__toolbar p
+ {
+   margin: 0;
+   padding: 0;
+ }
+ div.TMP__toolbar img
+ {
+position:relative;
+/*	top:-21px;*/
+z-index:5000;
+margin:0px auto;
+display:block;
+ }
+ div.TMP__toolbar a
+ {
+  margin:3px;
+  text-decoration:none;
+  color: #001937;
+ }
+
+ div.TMP__toolbar a:hover
+ {
+  margin:3px;
+  text-decoration:none;
+  color: #8D1231;
+ }
+ div.TMP__toolbar a.left
+ {
+float:left;
+clear:left;
+ }
+ div.TMP__toolbar a.right
+ {
+float:right;
+clear:right;
+ }
+ div.TMP__toolbar img
+ {
+   border:none;
+ }
+</style>
+
   </head>
   <body>
      <%= yield %>
