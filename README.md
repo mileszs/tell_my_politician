@@ -2,7 +2,7 @@
 
 URL: [http://www.tellmypolitician.com](http://www.tellmypolitician.com)
 
-## Tell your politicians your thoughts the minute you read something online with the TellMyPolitician Button or Bookmarklet. ##
+*Tell your politicians your thoughts the minute you read something online with the TellMyPolitician Button or Bookmarklet.*
 
 TellMyPolitician is the simplest way for citizens to contact their politicians. TellMyPolitician facilitates interaction between politicians and citizens when the citizen is most likely to take action -- when they're reading or watching the news. When a user wants to contact their politician about something they read or watched online they simply:
 
