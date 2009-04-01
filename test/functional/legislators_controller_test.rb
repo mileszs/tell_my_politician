@@ -45,11 +45,11 @@ class LegislatorsControllerTest < ActionController::TestCase
     context "with a cookie for ZIP code" do
       setup do
         @request.cookies['zip'] = CGI::Cookie.new('name' => 'zip', 'value' => '46260')
-        get :search, :u => 'http://google.com', :title => 'some title'
+        get :bm_search, :u => 'http://google.com', :title => 'some title'
       end
       should_assign_to :link
       should_not_set_the_flash
-      should_redirect_to "legislators_url(:u => 'http://google.com')"
+      should_redirect_to "bm_legislators_url(:u => 'http://google.com')"
     end
   end
 
@@ -114,7 +114,7 @@ class LegislatorsControllerTest < ActionController::TestCase
         :representative => new_legislator
       }
       Legislator.stubs(:all_for).returns(legislators)
-      get :index, :address => '1980 Picadilly Pl. Apt#A Indianapolis, IN 46260'
+      get :bm_index, :address => '1980 Picadilly Pl. Apt#A Indianapolis, IN 46260'
     end
 
     context "without a cookie for ZIP code, latitude, or longitude set" do
@@ -128,9 +128,10 @@ class LegislatorsControllerTest < ActionController::TestCase
         assert @request.cookies['long'].blank?
       end
       should_assign_to :results
-      should_render_template :index
+      should_render_template :bm_index
       should_not_set_the_flash
       should_respond_with :success
+      should_render_with_layout :bookmarklet
     end
 
     context "with a cookie for ZIP code, latitude, and longitude set" do
@@ -150,10 +151,10 @@ class LegislatorsControllerTest < ActionController::TestCase
         assert !@request.cookies['long'].blank?
       end
       should_assign_to :results
-      should_render_template :index
+      should_render_template :bm_index
       should_not_set_the_flash
       should_respond_with :success
-
+      should_render_with_layout :bookmarklet
     end
   end
 
