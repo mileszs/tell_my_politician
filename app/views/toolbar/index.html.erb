@@ -3,6 +3,10 @@
    <a class="right" href="<%= @search_url %>" ref="nofollow">Go back to Legislators List</a>
    <% unless @original_url.blank? %>
      <a class="left" href="<%= @original_url %>" ref="nofollow">Return to your original site</a>
+     <p class="left">
+       <label>Original site:</label>
+       <input name="original_url" type="text" value="<%= @original_url %>" />
+     </p>
    <% end %>
    <%= image_tag "/images/design/TMP_LOGO.png" %>
 </div>
