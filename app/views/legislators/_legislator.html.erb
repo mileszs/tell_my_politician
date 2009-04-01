@@ -1,19 +1,19 @@
 <% results_title(legislator.district, legislator.state) -%>
 <li class="<%= legislator.party %>">
-	<%= WriteImage( legislator.bioguide_id ) %>
+	<%= legislator_image( legislator.bioguide_id ) %>
 	<div class="politician_name">
     <span class="politician_name"><%= legislator.firstname + ' ' + legislator.middlename + ' ' + legislator.lastname %></span><br/>
 		<%= legislator.state %><br/>
-		<%= WriteLongPartyName(legislator.party) %><br/>
+		<%= full_party_name(legislator.party) %><br/>
 		<%= district_or_seniority(legislator.district) %><br/>
 	</div>
 	<div class="politician_address">
 		<b>phone</b> <%= legislator.phone %> |
 		<b>fax</b> <%= legislator.fax %><br/>
 		<%= legislator.congress_office %><br/>
-		<%= WriteTwitterUrl( legislator.twitter_id, legislator.title, legislator.firstname, legislator.lastname ) %>
-		<%= WriteWebsiteUrl( legislator.website, legislator.title, legislator.firstname, legislator.lastname ) %>
-                <%= WriteContactUrl( legislator.title, legislator.firstname, legislator.lastname, legislator.email, legislator.webform, @link.url ) %>
+		<%= twitter_link( legislator.twitter_id, legislator.title, legislator.firstname, legislator.lastname ) %>
+		<%= website_link( legislator.website, legislator.title, legislator.firstname, legislator.lastname ) %>
+                <%= contact_link(legislator.title, legislator.firstname, legislator.lastname, legislator.email, legislator.webform, @link.url) %>
 	</div>
 	<br style="clear:both" />
 </li>
