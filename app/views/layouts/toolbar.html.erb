@@ -26,48 +26,7 @@
  });
  
 </script>
-<style type="text/css">
-   body
-   {
-     background-image:none;
-     padding:0px;
-     margin:0px;
-   }
-   div.TMP__toolbar
-   {
-     background-color:#EBE7DE;
-     border-bottom: 5px solid #8F0F30;
-     height:50px;
-   }
-   div.TMP__toolbar img
-   {
-	position:relative;
-/*	top:-21px;*/
-	z-index:5000;
-	margin:0px auto;
-	display:block;
-   }
-   div.TMP__toolbar a
-   {
-	margin:3px;
-	text-decoration:none;
-       
-   }
-   div.TMP__toolbar a.left
-   {
-	float:left;   
-	clear:left;    
-   }
-   div.TMP__toolbar a.right
-   {
-	float:right;
-	clear:right;       
-   }
-   div.TMP__toolbar img
-   {
-     border:none;
-   }
-</style>
+    <%= stylesheet_link_tag 'toolbar', :media => 'all', :cache => true %>
   </head>
   <body>
      <%= yield %>
