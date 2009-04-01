@@ -41,7 +41,7 @@ ELlogo.style.width = '387px';
 ELlogo.style.height = '100px';
 ELlogo.style.margin = '0px auto';
 ELlogo.style.position = 'relative';
-ELlogo.style.top = '-42px;'
+ELlogo.style.top = '-42px;';
 
 //we need a close button as well
 var ELcloseImage = document.createElement('img');
