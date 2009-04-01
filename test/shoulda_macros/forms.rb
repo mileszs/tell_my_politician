@@ -24,5 +24,5 @@ class Test::Unit::TestCase
     else
       return "post", http_method
     end
-  end  
+  end
 end
