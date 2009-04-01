@@ -12,6 +12,7 @@ var bookmarkletHeight = '399px';
 //we need a place on this page to put everything.
 var ELcontainer = document.createElement('div');
 ELcontainer.id = 'tmp_holder';
+ELcontainer.setAttribute("style","-moz-border-radius:30px; -webkit-border-radius: 30px;");
 ELcontainer.style.width = bookmarkletWidth;
 ELcontainer.style.height = bookmarkletHeight;
 ELcontainer.style.position = 'absolute';
@@ -21,7 +22,6 @@ ELcontainer.style.zIndex = '5000';
 ELcontainer.style.padding = '15px';
 ELcontainer.style.backgroundColor = '#001937';
 ELcontainer.style.border = '5px solid #8f0f30';
-
 
 //we need a iframe that will load data from tmp.com
 var ELframe = document.createElement('iframe');
@@ -62,21 +62,6 @@ else {	// IE
 ELcontainer.appendChild(ELcloseImage);
 ELcontainer.appendChild(ELlogo);
 document.body.appendChild(ELcontainer);
-
-
-var ELsheet = document.createElement('style');
-var sheet = "#tmp_holder { position:absolute; top:10px; right:10px; z-index:100000; padding:15px; background-color:#001937; border:5px solid #8F0F30; -moz-border-radius:30px; -webkit-border-radius: 30px; }"; 
-
-sheet += "#tmp_logo{ background:url('" + Server + "/images/design/TMP_LOGO.png') no-repeat; width:387px; height:100px; margin:0px auto; position:relative; top:-42px; }";
-
-sheet += "#tmp_holder img { position:absolute; top:-10px; right:-12px; z-index:10000; }";
-
-sheet += "#tmp_holder iframe { -moz-border-radius:30px; -webkit-border-radius: 30px; overflow : hidden; }";
-
-ELsheet.appendChild(sheet);
-
-document.body.appendChild(ELsheet);
-
 
 self.scrollTo(0,0);
 
