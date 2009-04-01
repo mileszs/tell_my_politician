@@ -23,7 +23,7 @@ class LegislatorsControllerTest < ActionController::TestCase
 
     context "with a cookie for ZIP code" do
       setup do
-        @request.cookies['zip'] = CGI::Cookie.new('name' => 'zip', 'value' => '46260')
+        @request.cookies['zip'] = '46260'
         get :search, :link => { :url => 'http://google.com' }
       end
       should_assign_to :link
@@ -62,9 +62,9 @@ class LegislatorsControllerTest < ActionController::TestCase
 
     context "with a cookie for ZIP code, latitude, and longitude set" do
       setup do
-        @request.cookies['zip'] = CGI::Cookie.new('name' => 'zip', 'value' => '46260')
-        @request.cookies['lat'] = CGI::Cookie.new('name' => 'latitude', 'value' => '39.9209164')
-        @request.cookies['long'] = CGI::Cookie.new('name' => 'zip', 'value' => '-86.1945985')
+        @request.cookies['zip'] = '46260'
+        @request.cookies['lat'] = '39.9209164'
+        @request.cookies['long'] = '-86.1945985'
       end
 
       should "not have a blank 'zip' cookie" do
