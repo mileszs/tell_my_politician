@@ -36,7 +36,7 @@ ELcontainer.appendChild(ELframe);
 //next we need a div that can hold the logo
 var ELlogo = document.createElement('div');
 ELlogo.id = 'tmp_logo';
-//ELlogo.style.background = "url('http://tellmypolitician.com/images/design/TMP_LOGO.png') no-repeat";
+ELlogo.style.background = "url('http://tellmypolitician.com/images/design/TMP_LOGO.png') no-repeat";
 ELlogo.style.width = '387px';
 ELlogo.style.height = '100px';
 ELlogo.style.margin = '0px auto';
@@ -73,7 +73,7 @@ sheet += "#tmp_holder img { position:absolute; top:-10px; right:-12px; z-index:1
 
 sheet += "#tmp_holder iframe { -moz-border-radius:30px; -webkit-border-radius: 30px; overflow : hidden; }";
 
-ELsheet.innerHTML = sheet;
+ELsheet.appendChild(sheet);
 
 document.body.appendChild(ELsheet);
 
