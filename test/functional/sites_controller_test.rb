@@ -37,4 +37,21 @@ class SitesControllerTest < ActionController::TestCase
     should_not_set_the_flash
     should_respond_with :success
   end
+
+  context "on GET to :sentcontact" do
+
+    setup do 
+      get :sentcontact, 
+        :category => 'Press',
+        :name     => 'Xzibit',
+        :email    => 'x_to_tha_z_44@yahoo.com',
+        :phone    => '8009999876',
+        :subject  => 'Yo dawg!',
+        :message  => 'You been pimped!'
+    end
+
+    should "send an email" do
+      assert_sent_email
+    end
+  end
 end
