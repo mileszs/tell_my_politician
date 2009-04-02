@@ -16,3 +16,17 @@ config.action_controller.perform_caching             = true
 
 # Disable delivery errors, bad email addresses will be ignored
 config.action_mailer.raise_delivery_errors = true
+
+# Putting this in, say an initializer overrides
+# the delivery_method config option
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+:tls => true,
+:address => "smtp.gmail.com",
+:port => 587,
+#:domain => "tellmypolitician.com",
+:authentication => :plain,
+:user_name => "requests@tellmypolitician.com",
+:password => "notifyus"
+}
+
