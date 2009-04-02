@@ -1,9 +1,26 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 class LinksHelperTest < ActionView::TestCase
 
-  should "return an image tag on :legislator_image" do
-    output = legislator_image('8')
-    assert output =~ /<img/
+  context "on :legislator_image" do
+    should "return an image tag when passed a non-existant file name" do
+      output = legislator_image('8')
+      assert output =~ /<img/
+    end
+
+    context "when passed an existing file name" do
+      setup do
+        f = Dir.entries("#{Rails.root}/public/images/pictures")[2]
+        @output = legislator_image(f.split('.')[0])
+      end
+
+      should "return an image tag" do
+        assert @output =~ /<img/
+      end
+
+      should "not show a filler image if passed an existing id" do
+        assert @output !=~ /filler-image/
+      end
+    end
   end
 
   should "return an anchor tag on :contact_link" do
