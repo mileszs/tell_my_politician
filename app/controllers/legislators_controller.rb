@@ -10,42 +10,12 @@ class LegislatorsController < ApplicationController
   end
 
   def index
-    setup_index
-  end
-
-  def bm_index
-    setup_index
-  end
-
-  private
-
-  def setup_search(redirect_url)
-    @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
-    if !cookies["zip"].to_s.blank?
-      redirect_to redirect_url
+    if address = !params[:address].blank? && params[:address] || !params[:zip].blank? && params[:zip]
+      location = Geocoding::get(address).first
+      cookies['zip'], cookies['lat'], cookies['long'] = location.postal_code.to_s, location.latitude.to_s, location.longitude.to_s
     end
-  end
+    lat, long = cookies["lat"], cookies["long"]
 
-  def setup_index
-    if params[:address]
-      @address = params[:address]
-      location = Geocoding::get(params[:address]).first
-      cookies["zip"] = zip = location.postal_code
-      cookies["lat"] = lat = location.latitude.to_s
-      cookies["long"] = long = location.longitude.to_s
-    elsif params[:zip]
-      @address = params[:zip]
-      location = Geocoding::get(params[:zip]).first
-      cookies["zip"] = zip = location.postal_code
-      cookies["lat"] = lat = location.latitude.to_s
-      cookies["long"] = long = location.longitude.to_s
-    else
-      lat = cookies["lat"]
-      long = cookies["long"]
-    end
-
-    #we should also store the lat and long for the user link.
-    #just so we can see if people move? Or cheat?
     @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
     @user = UserLink.create({
       :ip         => request.remote_ip,
@@ -54,7 +24,18 @@ class LegislatorsController < ApplicationController
       :lat        => lat,
       :long       => long
     })
-    @results = Legislator.all_for( :latitude => lat , :longitude => long )
+    @results = Legislator.all_for(:latitude => lat, :longitude => long)
+  end
+
+  alias_method :bm_index, :index
+
+  private
+
+  def setup_search(redirect_url)
+    @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
+    if !cookies["zip"].to_s.blank?
+      redirect_to redirect_url
+    end
   end
 
   def choose_layout

@@ -1,4 +1,4 @@
-require 'test_helper'
+require File.dirname(__FILE__) + '/../../test_helper'
 class LinksHelperTest < ActionView::TestCase
 
   should "return an image tag on :legislator_image" do
