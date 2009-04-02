@@ -1,15 +1,17 @@
 <div class="header">
 <h2>TellMyPolitician Bookmarklet</h2>
 
-<p>Click and drag the button below to your bookmark bar.</p>
+<%= image_tag "/images/design/bookmarklet-instructions.png",:class=>"instructions" %>
+
+<p class="topp">Click and drag the button below to your bookmark bar.</p>
 <div class="bookmarklet">
 <%= image_tag "/images/design/TMP_BADGE.png" %>
 <a href="javascript:void((function(){var%20ELscript=document.createElement('script');ELscript.setAttribute('type','text/javascript');ELscript.setAttribute('src','http://tellmypolitician.com/javascripts/bookmarklet.js');document.body.appendChild(ELscript)})())">TellMyPolitician</a>
 </div>
 
-<%= image_tag "/images/design/bookmarklet-instructions.png",:style=>"float:right;position:relative;top:-38px;" %>
 
-<p>If your browser doesn't show the bookmarks bar, go to view then toolbar in the menu
+
+<p class="bottomp">If your browser doesn't show the bookmarks bar, go to view then toolbar in the menu
 </p>
 
 </div>
