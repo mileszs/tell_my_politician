@@ -6,6 +6,12 @@ class ApplicationHelperTest < ActionView::TestCase
     title('testing')
   end
 
+  should "call content_for for section meta_description on :meta_description" do
+    assert expects(:content_for).with(:meta_description)
+    meta_description('testing')
+  end
+
+
   context "getting css class for the body" do
     setup do
       self.stubs(:controller).returns(LegislatorsController.new)
