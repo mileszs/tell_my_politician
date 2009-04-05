@@ -25,6 +25,12 @@ class LegislatorsController < ApplicationController
       :long       => long
     })
     @results = Legislator.all_for(:latitude => lat, :longitude => long)
+
+    if @results.nil? 
+      flash[:notice] = "We did not find your legislators please try again. Include your fill address with zip code for best results"
+      redirect_to search_url
+    end
+
   end
 
   alias_method :bm_index, :index

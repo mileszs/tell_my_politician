@@ -71,4 +71,21 @@ module LinksHelper
   def results_title(district, state)
     title("#{state} District #{district}") if district =~ /^\d$/
   end
+
+  def full_address( address )
+     
+     if( !address.blank? )
+       
+        zip = '20510'
+        if( address.upcase.include?( 'CANNON' ) || address.upcase.include?( 'LONGWORTH' ) || address.upcase.include?( 'RAYBURN' ))        
+           zip = '20515'
+        end 
+
+        address = '<address>' + address;
+        address += '<br/> Washington D.C., ' + zip
+        address += "</addres>"
+     end
+
+  end
+
 end

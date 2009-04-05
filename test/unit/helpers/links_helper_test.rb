@@ -102,4 +102,44 @@ class LinksHelperTest < ActionView::TestCase
     assert output =~ /window\.top\.location/
   end
 
+  context "on :full_address" do
+    should "return the string of 20515 for the Cannon,Longworth,Rayburn Office Building" do
+
+        zip = '20515'
+
+	output = full_address( 'Cannon' )
+        assert output.include? zip
+        
+        output = full_address( 'Longworth')
+        assert output.include? zip
+
+        output = full_address( 'Rayburn')
+        assert output.include? zip
+
+    end
+    
+    should "return the string 21510 for the Russell, Hart, Dirksen Office Building" do
+
+        zip = '20510'
+
+	output = full_address('Russell')
+        assert output.include? zip
+
+        output = full_address('Hart')
+        assert output.include? zip
+
+        output = full_address('Dirksen')
+        assert output.include? zip
+
+    end
+
+    should "return a address with zip code 21510 for other addresses" do
+
+        output = full_address( 'testtesttest' )
+        assert output.include? '20510'
+
+    end
+
+  end
+
 end
