@@ -27,7 +27,7 @@ class LegislatorsController < ApplicationController
     @results = Legislator.all_for(:latitude => lat, :longitude => long)
 
     if @results.nil? 
-      flash[:notice] = "We did not find your legislators please try again. Include your fill address with zip code for best results"
+      flash[:notice] = "We did not find your legislators please try again. Include your full address with zip code for best results"
       redirect_to search_url
     end
 
