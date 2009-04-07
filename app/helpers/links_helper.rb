@@ -80,7 +80,7 @@ module LinksHelper
       end
       address = '<address>' + address;
       address += '<br/> Washington D.C., ' + zip
-      address += "</addres>"
+      address += "</address>"
     end
   end
 
