@@ -10,7 +10,7 @@
 	<div class="politician_address">
 		<b>phone</b> <%= legislator.phone %> |
 		<b>fax</b> <%= legislator.fax %><br/>
-		<%= legislator.congress_office %><br/>
+		<%= full_address( legislator.congress_office ) %><br/>
 		<%= twitter_link( legislator.twitter_id, legislator.title, legislator.firstname, legislator.lastname ) %>
 		<%= website_link( legislator.website, legislator.title, legislator.firstname, legislator.lastname ) %>
                 <%= contact_link(legislator.title, legislator.firstname, legislator.lastname, legislator.email, legislator.webform, @link.url) %>
