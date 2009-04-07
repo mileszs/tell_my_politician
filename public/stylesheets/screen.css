@@ -59,11 +59,11 @@ div#header
 {
 	text-align:center;
         height:63px;
-	
+
 }
 div#header a
 {
-	margin:0px;  
+	margin:0px;
 	text-decoration: none;
 	position:relative;
 	top:5px;
@@ -79,7 +79,7 @@ div.header h2
 div#wrapper
 {
 	border:solid 5px #8f0f30;
-	-moz-border-radius: 30px;	
+	-moz-border-radius: 30px;
 	-webkit-border-radius: 30px;
 	margin: 0px auto;
 	width:646px;
@@ -106,8 +106,8 @@ div#content
 	width:645px;
 	margin:0px auto;
         background-color:#b8ab9a;
-	-moz-border-radius: 20px;	
-	-webkit-border-radius: 20px;	
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
 }
 div#content a:hover {
   color: #8D1231;
@@ -118,7 +118,7 @@ ul
 	width:537px;
 	padding:0px;
 }
-li.D, li.R 
+li.D, li.R
 {
 	list-style:none;
 	clear:both;
@@ -134,7 +134,7 @@ li.D
 {
 	/*border-color:#0000FF;*/
 }
-li.R 
+li.R
 {
 	/*border-color:#FF0000;*/
 }
@@ -144,19 +144,23 @@ img.politician_picture
 	background-color:#FFFFFF;
 	width:66px;
 	height:85px;
-  	/*margin: 1em;	*/
+  /*margin: 1em;	*/
 }
 div.politician_name
 {
 	float:left;
-  	margin: 0px 20px 0px 5px;
-  	width: 137px;
+  margin: 0px 20px 0px 5px;
+  width: 137px;
 	text-align:right;
 }
 div.politician_address
 {
 	float:left;
 	width:265px
+}
+
+div.politician_address address {
+  font-style: normal;
 }
 
 .notice {
@@ -182,7 +186,7 @@ div#tools div.tool_type {
 div#tools div.tool_type div {
    margin: 92px 23px 0px 23px;
    font-size:14px;
-   color:#B8AB9A;   
+   color:#B8AB9A;
    font-weight:bold;
    font-family:Helvetica;
 }
@@ -195,7 +199,7 @@ div#tools div.tool_type div a {
    font-family:Verdana;
    text-decoration:none;
 }
-br.clear 
+br.clear
 {
 	clear:both;
 }
@@ -209,11 +213,11 @@ div#search input[type="text"]
         border-bottom-width:9px;
 	width:266px;
         margin:1px 0px 0px 0px;
-        
-	padding:5px 0px 0px 0px;       
+
+	padding:5px 0px 0px 0px;
         height:21px;
-	
-	float:left;	
+
+	float:left;
 }
 
 div#search form{
@@ -239,7 +243,7 @@ img.search-surround
 {
 	float:left;
 	margin:1px 0px 0px;
-	padding:0px;      
+	padding:0px;
 }
 input[type="image"].search-button
 {
@@ -258,12 +262,12 @@ div.header
 	background-color:#ebe7de;
 	margin:0px auto 10px auto;
 	/*border: solid 1px #FFFFFF;*/
-	padding:15px 10px 10px 10px;	
+	padding:15px 10px 10px 10px;
 	width:625px;
 	-moz-border-radius-topleft: 20px;
 	-moz-border-radius-topright: 20px;
-	-webkit-border-top-right-radius: 20px;  
-	-webkit-border-top-left-radius: 20px;  
+	-webkit-border-top-right-radius: 20px;
+	-webkit-border-top-left-radius: 20px;
 }
 div.contentcontainer
 {
@@ -329,7 +333,7 @@ form#contact input.required, form#contact textarea.required
 	border:solid 3px #8F0F30;
 }
 /*footer styles*/
-div#footer 
+div#footer
 {
 	margin-top:3px;
 }
@@ -376,8 +380,8 @@ div#flash
 {
 	-moz-border-radius-topleft: 20px;
 	-moz-border-radius-topright: 20px;
-	-webkit-border-top-right-radius: 20px;  
-	-webkit-border-top-left-radius: 20px;  
+	-webkit-border-top-right-radius: 20px;
+	-webkit-border-top-left-radius: 20px;
         background-color:#8F0F30;
 	float:left;
 	width:100%;
