@@ -1,0 +1,46 @@
+body { 
+	background-color: #001937; 
+	color: #666; 
+	text-align: center; 
+	font-family: arial,
+	sans-serif;
+	background-image:url(../images/design/TMP_BACKGROUND.jpg);
+	background-repeat: no-repeat;
+	background-position: center top; 
+}
+p {
+	margin:0px;
+	margin-top:40px;
+	padding:0px;
+	width:320px;
+}
+div.dialog {
+	width: 25em;
+	padding: 5px;
+	margin: 0 auto 0 auto;
+	-moz-border-radius: 30px;	
+	-webkit-border-radius: 30px;
+	border:solid 5px #8f0f30;
+}
+div.dialog-text {
+	background-color:#EBE7DE;
+	-moz-border-radius: 30px;	
+	-webkit-border-radius: 30px;
+	padding:30px;
+}
+h1 { 
+	font-size: 100%;
+	color: #8F0F30; 
+	line-height: 1.5em; 
+}
+div.dialog-text img { 
+	float:left; 
+	margin-left:20px; 
+}
+br {clear:both;}
+a {
+	text-decoration:none;
+}
+img {
+border:none;
+}
