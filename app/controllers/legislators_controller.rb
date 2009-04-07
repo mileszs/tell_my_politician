@@ -16,9 +16,13 @@ class LegislatorsController < ApplicationController
     end
     save_meta_data(@location.latitude, @location.longitude)
     @results = Legislator.all_for(:latitude => @location.latitude, :longitude => @location.longitude)
+    if @results.nil?
+      flash[:notice] = "We were unable to find any legislators. Please be sure to include your full address, with ZIP, and try again."
+      redirect_to search_url
+    end
   rescue NoMethodError => e
     flash.now[:notice] = 'There seems to be an issue with your address.  Please double-check it, and try again.'
-    logger.warn "------------------------------------------------------\n"
+    logger.warn "\n------------------------------------------------------\n"
     logger.warn "- There's probably an issue with the entered address -\n"
     logger.warn "------------------------------------------------------\n"
     logger.warn e.inspect
