@@ -19,6 +19,16 @@ h1 {
   width:527px;
   margin: 0px auto;
 }
+
+h2 {
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 30px;
+}
 div.bookmarklet
 {
   border:solid 3px #001937;
@@ -74,7 +84,8 @@ div#header a img
 }
 div.header h2
 {
-   margin-top:30px;
+  border: none;
+  margin-top:30px;
 }
 div#wrapper
 {
@@ -108,6 +119,9 @@ div#content
         background-color:#b8ab9a;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
+}
+div#content a:visited {
+  color: #060d99;
 }
 div#content a:hover {
   color: #8D1231;
