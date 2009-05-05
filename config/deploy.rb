@@ -18,6 +18,7 @@ role :app, "tellmypolitician.com"
 role :db,  "tellmypolitician.com", :primary => true
 
 before "deploy:migrate", "db:symlink"
+after "deploy", "blog_symlink"
 
 namespace :deploy do
 
@@ -58,4 +59,9 @@ namespace :db do
 #     run "mkdir -p #{shared_path}/config"
 #     put db_password, "#{shared_path}/config/dbpassword"
 #   end
+end
+
+desc "Make symlink for the blog"
+task :blog_symlink do
+  run "ln -nfs /home/tell_my_politician/public_html/wordpress #{release_path}/config/blog"
 end
