@@ -336,15 +336,16 @@ form#contact input.required, form#contact textarea.required
 div#footer
 {
 	margin-top:3px;
+  text-align: center;
 }
 div#footer a{
 	color:#f2e5d5;
 	text-decoration:none;
 	text-transform:capitalize;
-	/*font-size:12px;*/
+	font-size:12px;
 }
 div#footer ul{
-	width: 535px;
+	/* width: 535px; */
 	margin: 0px auto;
 	padding: 0px;
 }
