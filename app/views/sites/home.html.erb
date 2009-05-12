@@ -1,24 +1,64 @@
-<%= render :partial => 'legislators/search_form' %>
+<div class="contentcontainer homecontainer">
 
-<div id="tools">
-  <div class="tool_type" style="background-image:url('/images/design/chevron_publishers.png');">
-	<div>Allow citizens to contact their politicians from your site.
-	<%= link_to( 
-		'click here for more info', 
-		:controller=>:sites, 
-		:action=>'siteinstructions') 
-	%>
-        </div>
-  </div>
-  <div class="tool_type" style="background-image:url('/images/design/chevron_users.png');">
-        <div>
-	Contact your politician from any site with our bookmarklet.
-	<%= link_to( 
-		'click here for more info', 
-		:controller=>:sites, 
-		:action=>'instructions') 
-	%> 
-        </div>
-  </div>
-  <div style="clear: both;">&nbsp;</div>
+<div class="leftbar">
+<%= image_tag "/images/design/80x80_megaphone.png"%>
 </div>
+
+<div style="float:left;width:532px;">
+<div class="rightbar">
+<h3>Click Below To Try It!</h3>
+
+   <script type="text/javascript">
+		function tmp_click() {
+		var url = escape(location.href);
+		var title = escape(document.title);
+		var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+		document.location=tlocation;
+		return false;
+		}
+		</script>
+		<a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/tmp_publisher_button.png" hspace="5"></a>
+
+<%=link_to( image_tag( "/images/design/getyourbutton_button.png",:id=>"getbutton",:class=>"full"), :controller=>'sites',:action=>'siteinstructions') %>
+It's Free
+<br style="clear:both;"/>
+
+</div>
+<h1>TellMyPolitician</h1>
+<span class="byline"> TellMyPolitician is the easiest way for your readers to contact their politicians.</span>
+
+<h2>Why Use TellMyPolitician?</h2>
+Because TellMyPolitician?
+<ul>
+<li>Makes your centent more than just news</li>
+<li>Makes your content more powerful</li>
+<li>Gets your reader involved</li>
+</ul>
+
+<h2> How it Works.</h2>
+<p> 
+Simply add TellMyPolitician to your site with one of the many javascript buttons available. Or add it to your site with our Wordpress plugin.
+</p>
+<p>
+When users read an article or watch a video that makes them want to contact their politician, they just click the button and type in their address to find their politician.
+</p>
+<p>
+Users can then choose if they want to contact them by email, snail mail, by phone, or through Twitter.
+</p>
+
+<h2>Get Started.</h2>
+<p> Add TellMyPolitician to your site today. <%= link_to 'Click here to get your button.',:controller=>'sites',:action=>'siteinstructions' %>
+</p>
+
+<h3>Not A Publisher?</h3> 
+<p>
+Get the bookmarklet to contact your representatives from any site.
+Just drag the following link to your toolbar. 
+<a href="javascript:void((function(){var%20ELscript=document.createElement('script');ELscript.setAttribute('type','text/javascript');ELscript.setAttribute('src','http://tellmypolitician.com/javascripts/bookmarklet.js');document.body.appendChild(ELscript)})())">TellMyPolitician</a>
+</p>
+</div>
+
+
+<br style="clear:both;"/>
+</div>
+
