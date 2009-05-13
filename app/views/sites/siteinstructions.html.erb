@@ -44,7 +44,7 @@
     var url = escape(location.href);
     var title = escape(document.title);
     var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    document.location=tlocation;
+    window.open(tlocation);
     return false;
   }
 </script>
@@ -62,7 +62,7 @@
   var url = escape(location.href);
   var title = escape(document.title);
   var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-  document.location=tlocation;
+  window.open(tlocation);
   return false;
   }
   </script>
@@ -76,7 +76,7 @@
     var url = escape(location.href);
     var title = escape(document.title);
     var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    document.location=tlocation;
+    window.open(tlocation);
     return false;
   }
 </script>
@@ -92,7 +92,7 @@
   var url = escape(location.href);
   var title = escape(document.title);
   var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-  document.location=tlocation;
+  window.open(tlocation);
   return false;
   }
   </script>
@@ -106,7 +106,7 @@
     var url = escape(location.href);
     var title = escape(document.title);
     var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    document.location=tlocation;
+    window.open(tlocation);
     return false;
   }
 </script>
@@ -122,7 +122,7 @@
   var url = escape(location.href);
   var title = escape(document.title);
   var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-  document.location=tlocation;
+  window.open(tlocation);
   return false;
   }
   </script>
@@ -137,7 +137,7 @@
     var url = escape(location.href);
     var title = escape(document.title);
     var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    document.location=tlocation;
+    window.open(tlocation);
     return false;
   }
 </script>
@@ -170,13 +170,13 @@
   <div class="codeblock">
 <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
 <script type="text/javascript">
-function tmp_click() {
-var url = escape(location.href);
-var title = escape(document.title);
-var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-document.location=tlocation;
-return false;
-}
+  function tmp_click() {
+    var url = escape(location.href);
+    var title = escape(document.title);
+    var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+    window.open(tlocation);
+    return false;
+  }
 </script>
 <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a><a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
 </textarea>
