@@ -67,8 +67,7 @@ input[type="submit"]:hover
 div#header
 {
 	text-align:center;
-        height:63px;
-
+  height:63px;
 }
 div#header a
 {
@@ -115,9 +114,13 @@ div#content
 {
 	width:645px;
 	margin:0px auto;
-  background-color:#b8ab9a;
+	background-color:#ebe7de;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
+}
+body.legislators div#content
+{
+  background-color:#b8ab9a;
 }
 div#content a:visited {
   color: #060d9b;
@@ -284,13 +287,22 @@ div.header
 }
 div.contentcontainer
 {
-	padding:10px;
+	padding: 10px;
 	font-family:Verdana;
-        color:#000;
+  color:#000;
 	font-size:14px;
 	line-height:1.5em;
 }
 
+body.sites-siteinstructions div.contentcontainer {
+  margin-top: -25px;
+}
+body.sites-siteinstructions div.header {
+  margin-bottom: 0;
+}
+body.sites-siteinstructions div.contentcontainer textarea {
+  border: 1px solid #000;
+}
 div.contentcontainer div.indent {
   margin-left: 1.5em;
 }
