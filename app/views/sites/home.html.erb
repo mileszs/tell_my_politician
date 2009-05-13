@@ -13,7 +13,7 @@
 		var url = escape(location.href);
 		var title = escape(document.title);
 		var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-		document.location=tlocation;
+		window.open(tlocation);
 		return false;
 		}
 		</script>
@@ -47,7 +47,7 @@ Users can then choose if they want to contact them by email, snail mail, by phon
 </p>
 
 <h2>Get Started.</h2>
-<p> Add TellMyPolitician to your site today. <%= link_to 'Click here to get your button.',:controller=>'sites',:action=>'siteinstructions' %>
+<p> Add TellMyPolitician to your site today. <%= link_to 'Click here to get your button',:controller=>'sites',:action=>'siteinstructions' %>.
 </p>
 
 <h3>Not A Publisher?</h3> 
