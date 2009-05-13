@@ -474,11 +474,9 @@ div.homecontainer
 {
 	padding:45px 10px 10px 10px;
 	background-color:#EBE7DE;
-	line-height:1.1em;
+	line-height:1.3em;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;	
-	
-
 }
 div.homecontainer div#home-text {
   float: left;
@@ -503,4 +501,5 @@ div.homecontainer a
 div.rightbar h3
 {
 	margin-top:10px;
+	margin-bottom:10px;
 }
