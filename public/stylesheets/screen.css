@@ -116,12 +116,12 @@ div#content
 {
 	width:645px;
 	margin:0px auto;
-        background-color:#b8ab9a;
+  background-color:#b8ab9a;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 }
 div#content a:visited {
-  color: #060d99;
+  color: #060d9b;
 }
 div#content a:hover {
   color: #8D1231;
@@ -495,8 +495,13 @@ div.homecontainer li
 div.homecontainer a
 {
 	text-decoration:none;
-	color:#001937;
 	font-weight:bold;
+}
+div.homecontainer a:visited {
+  color: #060d9b;
+}
+div.homecontainer a:hover {
+  color: #8D1231;
 }
 div.rightbar h3
 {
