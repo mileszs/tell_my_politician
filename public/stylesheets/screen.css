@@ -294,6 +294,11 @@ div.contentcontainer
 	line-height:1.5em;
 }
 
+body.legislators div.contentcontainer h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
 body.sites-siteinstructions div.contentcontainer,
 body.sites-privacy div.contentcontainer,
 body.sites-about div.contentcontainer {
