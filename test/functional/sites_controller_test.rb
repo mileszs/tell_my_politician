@@ -5,7 +5,6 @@ class SitesControllerTest < ActionController::TestCase
   context "on GET to :home" do
     setup { get :home }
     should_render_template :home
-    should_render_a_form
     should_not_set_the_flash
     should_respond_with :success
   end
