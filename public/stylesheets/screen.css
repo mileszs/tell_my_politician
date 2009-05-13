@@ -294,10 +294,14 @@ div.contentcontainer
 	line-height:1.5em;
 }
 
-body.sites-siteinstructions div.contentcontainer {
+body.sites-siteinstructions div.contentcontainer,
+body.sites-privacy div.contentcontainer,
+body.sites-about div.contentcontainer {
   margin-top: -25px;
 }
-body.sites-siteinstructions div.header {
+body.sites-siteinstructions div.header,
+body.sites-privacy div.header,
+body.sites-about div.header {
   margin-bottom: 0;
 }
 body.sites-siteinstructions div.contentcontainer textarea {
