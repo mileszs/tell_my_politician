@@ -290,6 +290,11 @@ div.contentcontainer
 	font-size:14px;
 	line-height:1.5em;
 }
+
+div.contentcontainer div.indent {
+  margin-left: 1.5em;
+}
+
 /*contact page*/
 form#contact
 {

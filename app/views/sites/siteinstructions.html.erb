@@ -24,20 +24,22 @@
   </p>
   
   <h3>Button Only</h3>
-<p><strong>Example</strong>:
-    <script type="text/javascript">
-		function tmp_click() {
-		var url = escape(location.href);
-		var title = escape(document.title);
-		var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-		document.location=tlocation;
-		return false;
-		}
-		</script>
-		<a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/tmp_publisher_button.png" hspace="5"></a>
-</p>
-  <div class="codeblock">
-    <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
+  <div class="indent">
+    <p>
+      <strong>Example</strong>:
+      <script type="text/javascript">
+      function tmp_click() {
+      var url = escape(location.href);
+      var title = escape(document.title);
+      var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+      document.location=tlocation;
+      return false;
+      }
+      </script>
+      <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/tmp_publisher_button.png" hspace="5"></a>
+    </p>
+    <div class="codeblock">
+      <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
 
 <script type="text/javascript">
   function tmp_click() {
@@ -50,101 +52,111 @@
 </script>
 <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a><a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
 
-    </textarea>
+      </textarea>
+    </div>
   </div>
 
-<p>Here are a few more variations from which to choose:</p>
+  <p>Here are a few more variations from which to choose:</p>
 
-<h3>Icon Only</h3>
-<p><strong>Example</strong>:
+  <h3>Icon Only</h3>
+  <div class="indent">
+    <p>
+      <strong>Example</strong>:
+      <script type="text/javascript">
+        function tmp_click() {
+          var url = escape(location.href);
+          var title = escape(document.title);
+          var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+          window.open(tlocation);
+          return false;
+        }
+      </script>
+      <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a>
+    </p>
+    <div class="codeblock">
+      <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
+
   <script type="text/javascript">
-  function tmp_click() {
-  var url = escape(location.href);
-  var title = escape(document.title);
-  var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-  window.open(tlocation);
-  return false;
-  }
+    function tmp_click() {
+      var url = escape(location.href);
+      var title = escape(document.title);
+      var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+      window.open(tlocation);
+      return false;
+    }
   </script>
   <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a>
-</p>
-<div class="codeblock">
-  <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
 
-<script type="text/javascript">
-  function tmp_click() {
-    var url = escape(location.href);
-    var title = escape(document.title);
-    var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    window.open(tlocation);
-    return false;
-  }
-</script>
-<a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a>
+      </textarea>
+    </div>
+  </div>
 
-  </textarea>
-</div>
+  <h3>Text Only</h3>
+  <div class="indent">
+    <p>
+      <strong>Example</strong>:
+    <script type="text/javascript">
+      function tmp_click() {
+        var url = escape(location.href);
+        var title = escape(document.title);
+        var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+        window.open(tlocation);
+        return false;
+      }
+    </script>
+    <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
+    </p>
+    <div class="codeblock">
+      <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
 
-<h3>Text Only</h3>
-<p><strong>Example</strong>:
+    <script type="text/javascript">
+      function tmp_click() {
+        var url = escape(location.href);
+        var title = escape(document.title);
+        var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+        window.open(tlocation);
+        return false;
+      }
+    </script>
+    <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
+
+      </textarea>
+    </div>
+  </div>
+
+  <h3>Icon &amp; Text</h3>
+  <div class="indent">
+    <p>
+      <strong>Example</strong>:
+      <script type="text/javascript">
+        function tmp_click() {
+          var url = escape(location.href);
+          var title = escape(document.title);
+          var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+          window.open(tlocation);
+          return false;
+        }
+      </script>
+    <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a><a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
+    </p>
+
+    <div class="codeblock">
+      <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
+
   <script type="text/javascript">
-  function tmp_click() {
-  var url = escape(location.href);
-  var title = escape(document.title);
-  var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-  window.open(tlocation);
-  return false;
-  }
-  </script>
-  <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
-</p>
-<div class="codeblock">
-  <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
-
-<script type="text/javascript">
-  function tmp_click() {
-    var url = escape(location.href);
-    var title = escape(document.title);
-    var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    window.open(tlocation);
-    return false;
-  }
-</script>
-<a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
-
-  </textarea>
-</div>
-
-<h3>Icon &amp; Text</h3>
-<p><strong>Example</strong>:
-  <script type="text/javascript">
-  function tmp_click() {
-  var url = escape(location.href);
-  var title = escape(document.title);
-  var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-  window.open(tlocation);
-  return false;
-  }
+    function tmp_click() {
+      var url = escape(location.href);
+      var title = escape(document.title);
+      var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
+      window.open(tlocation);
+      return false;
+    }
   </script>
   <a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a><a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
-</p>
 
-<div class="codeblock">
-  <textarea style="overflow: auto;" rows="9" cols="70" wrap="off" readonly>
-
-<script type="text/javascript">
-  function tmp_click() {
-    var url = escape(location.href);
-    var title = escape(document.title);
-    var tlocation = 'http://tellmypolitician.com/search?u=' + url + '&title=' + title;
-    window.open(tlocation);
-    return false;
-  }
-</script>
-<a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank"><img src="http://tellmypolitician.com/images/design/TMP_BADGE.png" hspace="5"></a><a href="http://tellmypolitician.com/search?" title="Contact Your Representatives" onclick="return tmp_click()" target="_blank">TellMyPolitician</a>
-
-   </textarea>
-</div>
+       </textarea>
+    </div>
+  </div>
 
 <h2><a name="wordpress">Wordpress Plugin</a></h2>
 <p>
