@@ -480,6 +480,11 @@ div.homecontainer
 	
 
 }
+div.homecontainer div#home-text {
+  float: left;
+  width: 532px;
+  margin-top: 10px;
+}
 div.content
 {
 	padding-top:35px;
