@@ -2,10 +2,10 @@
 /*
 Plugin Name: TellMyPolitician
 Version: 1.0
-Plugin URI: http://www.tellmypolitician.com/tools/wp
+Plugin URI: http://tellmypolitician.com/tools/wp
 Description: Adds a footer link to a current post or page that lets users share articles with their politician. This plugin code was originally created by <a href="http://nothing.golddave.com/">David Goldstein</a> for his <a href="http://nothing.golddave.com/?page_id=108">Add To Facebook</a> plugin.
 Author: Tim Flint
-Author URI: http://www.tellmypolitician.com/
+Author URI: http://tellmypolitician.com/
 */
 /*
 Copyright (c) 2009, TellMyPolitician
@@ -22,13 +22,13 @@ function tell_my_politician($data){
 	$linktype = $current_options['link_type'];
 	switch ($linktype) {
 		case "text":
-			$data=$data."<p class=\"tellmypolitician\"><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
+			$data=$data."<p class=\"tellmypolitician\"><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
 			break;
 		case "image":
-			$data=$data."<p class=\"tellmypolitician\"><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a></p>";
+			$data=$data."<p class=\"tellmypolitician\"><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a></p>";
 			break;
 		case "both":
-			$data=$data."<p class=\"tellmypolitician\"><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
+			$data=$data."<p class=\"tellmypolitician\"><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
 			break;
 		}
 		return $data;
@@ -54,13 +54,13 @@ function tellmypolitician(){
 		$linktype = $current_options['link_type'];
 		switch ($linktype) {
 			case "text":
-				echo "<p class=\"tellmypolitician\"><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
+				echo "<p class=\"tellmypolitician\"><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
 				break;
 			case "image":
-				echo "<p class=\"tellmypolitician\"><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a></p>";
+				echo "<p class=\"tellmypolitician\"><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a></p>";
 				break;
 			case "both":
-				echo "<p class=\"tellmypolitician\"><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a><a href=\"http://www.tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
+				echo "<p class=\"tellmypolitician\"><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\"><img src=\"".get_bloginfo(wpurl)."/wp-content/plugins/tellmypolitician-plugin/tmp_icon.jpg\" alt=\"TellMyPolitician\" title=\"Contact Your Representatives\" /></a><a href=\"http://tellmypolitician.com/search?u=".urlencode(get_permalink($post->ID))."&title=".urlencode($post->post_title)."&client=2"."\" target=\"_blank\" title=\"Contact Your Representatives\">TellMyPolitician</a></p>";
 				break;
 			}
 		}
