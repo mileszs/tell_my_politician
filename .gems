@@ -1,0 +1,7 @@
+RedCloth --version "~> 3.0.4"
+mislav-will_paginate --version "~> 2.3.6" --source http://gems.github.com
+ym4r
+json
+sunlight
+mbleigh-acts-as-taggable-on --source http://gems.github.com
+ambethia-smtp-tls --source http://gems.github.com/
