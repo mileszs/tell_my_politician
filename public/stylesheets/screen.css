@@ -3,7 +3,7 @@ body {
   background-color:#001937;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
   font-size: 14px;
   background-image: url('../images/design/TMP_BACKGROUND.jpg');
   background-repeat:no-repeat;
@@ -204,7 +204,7 @@ div#tools div.tool_type div {
    font-size:14px;
    color:#B8AB9A;
    font-weight:bold;
-   font-family:Helvetica;
+   font-family: Helvetica, Arial, Verdana, sans-serif;
 }
 div#tools div.tool_type div a {
    display:block;
@@ -212,7 +212,7 @@ div#tools div.tool_type div a {
    font-size:10px;
    color:#FFF;
    font-weight:bold;
-   font-family:Verdana;
+   font-family: Verdana, Helvetica, Arial, sans-serif;
    text-decoration:none;
 }
 br.clear
@@ -246,8 +246,8 @@ div#search h2
 {
 	color:#8D1231;
 	font-size:17px;
-        letter-spacing:-2px;
-	font-family:Verdana;
+  letter-spacing:-2px;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 	/*position:relative;
 	top:25px;
 	left:10px*/
@@ -288,7 +288,7 @@ div.header
 div.contentcontainer
 {
 	padding: 10px;
-	font-family:Verdana;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
   color:#000;
 	font-size:14px;
 	line-height:1.5em;
