@@ -33,6 +33,7 @@ config.gem 'thoughtbot-shoulda',
            :lib => 'shoulda', 
            :source => 'http://gems.github.com', 
            :version => '>= 2.9.1'
+config.gem 'metric_fu', :lib => 'metric_fu'
 
 HOST = 'localhost'
 
