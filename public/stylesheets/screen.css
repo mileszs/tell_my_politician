@@ -240,7 +240,10 @@ div#search form{
 	margin: 0px auto;
 	width: 376px;
 	padding-left:37px;
-	padding-top:38px;
+	padding-top:35px;
+}
+.homecontainer div#search form{
+	padding-top:15px;
 }
 div#search h2
 {
@@ -271,6 +274,11 @@ input[type="image"].search-button
 div#search{
 	padding:0px;
 	width:645px;
+}
+.homecontainer div#search{
+	margin-bottom:15px;	
+	padding:0px;
+	width:625px;
 }
 /* header for all the other pages that don't have the search box */
 div.header
