@@ -10,7 +10,7 @@ class ToolbarControllerTest < ActionController::TestCase
 
   context "on GET to :index with cookie set" do
       setup do
-        @request.cookies['zip'] = CGI::Cookie.new('name' => 'zip', 'value' => '46260')
+        @request.cookies['zip'] = '46260'
         get :index, :u => 'http://google.com', :target_url => 'http://gmail.com' 
       end
       should_assign_to :original_url

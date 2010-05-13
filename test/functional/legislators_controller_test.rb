@@ -28,7 +28,7 @@ class LegislatorsControllerTest < ActionController::TestCase
       end
       should_assign_to :link
       should_not_set_the_flash
-      should_redirect_to "legislators_url(:u => 'http://google.com')"
+      should_redirect_to("legislators_url(:u => 'http://google.com')") { legislators_url(:u => 'http://google.com') }
     end
   end
 
@@ -49,7 +49,7 @@ class LegislatorsControllerTest < ActionController::TestCase
       end
       should_assign_to :link
       should_not_set_the_flash
-      should_redirect_to "bm_legislators_url(:u => 'http://google.com')"
+      should_redirect_to("bm_legislators_url(:u => 'http://google.com')") { bm_legislators_url(:u => 'http://google.com') }
     end
   end
 
@@ -61,7 +61,7 @@ class LegislatorsControllerTest < ActionController::TestCase
         :junior_senator => new_legislator,
         :representative => new_legislator
       }
-      Legislator.stubs(:all_for).returns(legislators)
+      Sunlight::Legislator.stubs(:all_for).returns(legislators)
       get :index, :address => '1980 Picadilly Pl. Apt#A Indianapolis, IN 46260'
     end
 
@@ -113,7 +113,7 @@ class LegislatorsControllerTest < ActionController::TestCase
         :junior_senator => new_legislator,
         :representative => new_legislator
       }
-      Legislator.stubs(:all_for).returns(legislators)
+      Sunlight::Legislator.stubs(:all_for).returns(legislators)
       get :bm_index, :address => '1980 Picadilly Pl. Apt#A Indianapolis, IN 46260'
     end
 
@@ -161,7 +161,7 @@ class LegislatorsControllerTest < ActionController::TestCase
   private
 
   def new_legislator(attrs = {})
-    Legislator.new({
+    Sunlight::Legislator.new({
     'title'       => 'Sen',
     'firstname'   => 'Miles',
     'middlename'  => 'Zane',

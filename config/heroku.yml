@@ -1,0 +1,5 @@
+apps:
+  # shorthand: heroku app
+  production: falling-rain-99
+  # staging: awesomeapp-staging
+  # demo: awesomeapp-demo

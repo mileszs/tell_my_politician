@@ -10,12 +10,12 @@ class LegislatorsController < ApplicationController
   end
 
   def index
-    if address = !params[:address].blank? && params[:address] || !params[:zip].blank? && params[:zip]
+    if address = params[:address].present? && params[:address] || params[:zip].present? && params[:zip]
       @location = Geocoding::get(address).first
       cookies['zip'], cookies['lat'], cookies['long'] = @location.postal_code.to_s, @location.latitude.to_s, @location.longitude.to_s
     end
     save_meta_data(@location.latitude, @location.longitude)
-    @results = Legislator.all_for(:latitude => @location.latitude, :longitude => @location.longitude)
+    @results = Sunlight::Legislator.all_for(:latitude => @location.latitude, :longitude => @location.longitude)
     if @results.nil?
       flash[:notice] = "We were unable to find any legislators. Please be sure to include your full address, with ZIP, and try again."
       redirect_to search_url

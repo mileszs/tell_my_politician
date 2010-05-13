@@ -1,5 +1,5 @@
 # Be sure to restart your server when you modify this file
-
+#
 # Change this to the name of your rails project, like carbonrally.  
 # Just use the same name as the svn repo.
 PROJECT_NAME = "tell_my_politician"
@@ -8,54 +8,50 @@ throw "The project's name in environment.rb is blank" if PROJECT_NAME.empty?
 throw "Project name (#{PROJECT_NAME}) must_be_like_this" unless PROJECT_NAME =~ /^[a-z_]*$/
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.1.1' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
-
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
-  # See Rails::Configuration for more options.
 
-  # Skip frameworks you're not going to use. To use Rails without a database
-  # you must remove the Active Record framework.
-  # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
+  # Add additional load paths for your own custom dirs
+  # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
-  # Specify gems that this application depends on.
+  # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem 'RedCloth',
              :lib => 'redcloth', 
              :version => '~> 3.0.4'
-  config.gem 'mislav-will_paginate', 
-             :lib => 'will_paginate', 
-             :source => 'http://gems.github.com', 
-             :version => '~> 2.3.6'
+  config.gem 'will_paginate'
   config.gem 'ym4r'
-  config.gem 'json'
+  # config.gem 'json'
   config.gem 'sunlight'
-  config.gem 'mbleigh-acts-as-taggable-on', :source => "http://gems.github.com", :lib => "acts-as-taggable-on"
-  config.gem "ambethia-smtp-tls", :lib => "smtp-tls", :source => "http://gems.github.com/"
+  config.gem 'acts-as-taggable-on'
+  config.gem 'hoptoad_notifier'
+  # config.gem "ambethia-smtp-tls", :lib => "smtp-tls", :source => "http://gems.github.com/"
 
-  
-  # Only load the plugins named here, in the order given. By default, all plugins 
-  # in vendor/plugins are loaded in alphabetical order.
+  # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
-  
-  # Add the vendor/gems/*/lib directories to the LOAD_PATH
   config.load_paths += Dir.glob(File.join(RAILS_ROOT, 'vendor', 'gems', '*', 'lib'))
 
-  # Force all environments to use the same logger level
-  # (by default production uses :info, the others :debug)
-  # config.log_level = :debug
+  # Skip frameworks you're not going to use. To use Rails without a database,
+  # you must remove the Active Record framework.
+  # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
-  # Make Time.zone default to the specified zone, and make Active Record store time values
-  # in the database in UTC, and return them converted to the specified local zone.
-  # Run "rake -D time" for a list of tasks for finding time zone names. Uncomment to use default local time.
+  # Activate observers that should always be running
+  # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
+
+  # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+  # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
 
+  # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+  # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+  # config.i18n.default_locale = :de
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
@@ -65,18 +61,4 @@ Rails::Initializer.run do |config|
     :session_key => "_#{PROJECT_NAME}_session",
     :secret      => SESSION_KEY
   }
-
-  # Use the database for sessions instead of the cookie-based default,
-  # which shouldn't be used to store highly confidential information
-  # (create the session table with "rake db:sessions:create")
-  # config.action_controller.session_store = :active_record_store
-
-  # Use SQL instead of Active Record's schema dumper when creating the test database.
-  # This is necessary if your schema can't be completely dumped by the schema dumper,
-  # like if you have constraints or database-specific column types
-  # config.active_record.schema_format = :sql
-
-  # Activate observers that should always be running
-  # config.active_record.observers = :cacher, :garbage_collector
 end
-
