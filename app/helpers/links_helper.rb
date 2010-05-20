@@ -48,15 +48,7 @@ module LinksHelper
   end
 
   def email_link(email, webform, link_url = '')
-    str = ''
-    if webform.upcase != 'NONE'
-      str = '/toolbar?target_url=' + CGI.escape(webform.to_s)
-      str +=  '&u=' + link_url unless link_url.blank?
-      str = topify( str )
-    elsif !email.blank?
-      str = 'mailto:' + email.to_s
-    end
-    str
+    email.present? ? 'mailto:' + email.to_s : webform
   end
 
   def district_or_seniority(str)
