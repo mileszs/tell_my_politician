@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.bm_legislators 'bookmarklet/legislators', :controller => 'legislators', :action => 'bm_index'
   map.resources :legislators, :only => [:index], :collection => { :search => :get }
   map.search 'search', :controller => 'legislators', :action => 'search'
+  map.district 'district/:slug', :controller => 'legislators', :action => 'district'
   map.zip ':zip', :controller => 'legislators', :action => 'index', :zip => /\d+/
 
   map.root :controller => 'sites', :action => :home
