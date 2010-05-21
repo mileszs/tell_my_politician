@@ -1,19 +1,12 @@
-<%
-   cssClassName = 'header' if local_assigns[ :cssClassName ].nil?
-%>
+<% cssClassName = 'header' if local_assigns[ :cssClassName ].nil? %>
 
 <div id="search" class="<%= cssClassName %>">
 	<% form_tag('/legislators', :method => :get) do %>
 		<h2>Find Your Representatives</h2>
 		<img class="search-surround left" src="/images/design/ls-search-box.jpg"/>
-    <%= text_field_tag :address, nil, :title => 'Please Enter Your Full Address' %>
+    <%= text_field_tag :address, nil, :value => session[:address] || 'Please Enter Your Full Address' %>
 		<img class="search-surround right" src="/images/design/rs-search-box.jpg"/>
 		<%= image_submit_tag '/images/design/find-button.jpg', :class=>'search-button' %>
 		<br class="clear"/>
 	<% end %>
 </div>
-<script type="text/javascript">
-	$().ready(function() {
-		$('#address').labelify();
-  });
-</script>
