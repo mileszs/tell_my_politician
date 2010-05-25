@@ -18,7 +18,7 @@ class LegislatorsController < ApplicationController
     end
 
     if @district = Sunlight::District.get(:latitude => @location.latitude, :longitude => @location.longitude)
-      redirect_to district_url(:slug => US_STATES[@district.state].downcase.gsub(' ', '-') + '-' + @district.number) 
+      redirect_to district_url(:slug => US_STATES[@district.state].downcase.gsub(' ', '-') + '-' + @district.number)
     else
       flash[:notice] = "We were unable to find any legislators. Please be sure to include your full address, with ZIP, and try again."
       redirect_to search_url
@@ -34,9 +34,13 @@ class LegislatorsController < ApplicationController
     state, number = parse_district_slug
     state_abbrev = US_STATES.invert[state]
     if state_abbrev.nil?
-      render_404("US state '#{state}' does not exist.")
-    else
-      @results = Sunlight::Legislator.all_in_district(Sunlight::District.new(US_STATES.invert[state.titleize], number))
+      logger.info("US state '#{state}' does not exist.")
+      render_404
+    end
+    @results = Sunlight::Legislator.all_in_district(Sunlight::District.new(US_STATES.invert[state.titleize], number))
+    if @results[:representative].blank?
+      logger.info("The district #{state.titleize} #{number} does not exist.")
+      render_404
     end
   end
 
