@@ -6,7 +6,7 @@
 		<img class="search-surround left" src="/images/design/ls-search-box.jpg"/>
     <%= text_field_tag :address, nil, :value => session[:address] || 'Please Enter Your Full Address' %>
 		<img class="search-surround right" src="/images/design/rs-search-box.jpg"/>
-		<%= image_submit_tag '/images/design/find-button.jpg', :class=>'search-button' %>
+    <%= image_submit_tag '/images/design/find-button.jpg', :class => 'search-button', :id => 'legislators-search-button' %>
 		<br class="clear"/>
 	<% end %>
 </div>
