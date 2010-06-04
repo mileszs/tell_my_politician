@@ -53,7 +53,7 @@ class LegislatorsController < ApplicationController
   end
 
   def setup_search(redirect_url)
-    @link = Link.find_or_create_by_url(params[:u], :title => params[:title])
+    @link = Link.find_or_create_by_url(params[:u], :title => params[:title]) unless params[:u].nil?
     if cookies["zip"].to_s.present?
       redirect_to redirect_url
     end

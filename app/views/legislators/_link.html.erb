@@ -1,5 +1,9 @@
 <div class="contentcontainer">
-	<h2>Share A Link</h2>
-	Find your politician and pick which one you would like to share the following link with.</br>
-	<%=link_to @link.title, @link.url %>
+  <% if @link.blank? -%>
+    &nbsp;
+  <% else -%>
+    <h2>Share A Link</h2>
+    Find your politician and pick which one you would like to share the following link with.</br>
+    <%=link_to @link.title, @link.url %>
+  <% end -%>
 </div>
